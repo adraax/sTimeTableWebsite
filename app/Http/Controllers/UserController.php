@@ -16,7 +16,7 @@ class UserController extends Controller
     public function __construct(UserRepository $userRepository)
     {
         $this->userRepository = $userRepository;
-        $this->middleware('admin')->only('update');
+        $this->middleware('auth');
     }
 
     public function index()

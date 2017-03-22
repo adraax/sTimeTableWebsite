@@ -1,5 +1,9 @@
 @extends('layouts.template')
 
+@section('title')
+    Installation
+@endsection
+
 @section('content')
     <div class="blog-header">
         <h1 class="blog-title">The Bootstrap Blog</h1>

@@ -1,11 +1,19 @@
 @extends('layouts.template')
 
+@section('title')
+    Utilisateurs - @parent
+@endsection
+
 @section('content')
 
     <br>
     <div class="col-sm-offset-2 col-sm-8">
         @if(session()->has('ok'))
-            <div class="alert alert-success alert-dismissible">{!! session('ok') !!}</div>
+            <div class="alert alert-success alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                {!! session('ok') !!}
+            </div>
         @endif
         <div class="panel panel-primary">
             <div class="panel-heading">
@@ -28,9 +36,16 @@
                         <td class="text-primary"><strong>{!! $user->name !!}</strong></td>
                         <td><a href="{!! route('user.show', $user->id) !!}" class="btn btn-success btn-block">Voir</a>
                         </td>
-                        @if(Auth::user()->admin)
+
+                        @if(Auth::user()->id == $user->id || Auth::user()->admin)
                             <td><a href="{!! route('user.edit', $user->id) !!}"
-                                   class="btn btn-warning btn-block">Modifier</a></td>
+                                   class="btn btn-warning btn-block">Modifier</a>
+                            </td>
+                        @else
+                            <td></td>
+                        @endif
+
+                        @if(Auth::user()->admin)
                             <td>
                                 <form method="post" action="{!! route('user.destroy', $user->id) !!}">
                                     {{ csrf_field() }}
@@ -41,7 +56,6 @@
                                 </form>
                             </td>
                         @else
-                            <td></td>
                             <td></td>
                         @endif
                     </tr>

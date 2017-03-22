@@ -20,6 +20,7 @@
                             {!! $errors->first('email', '<small class="help-block">:message</small>') !!}
                         </div>
 
+                        @if(Auth::user()->admin)
                         <div class="form-group">
                             <div class="checkbox">
                                 <label>
@@ -28,6 +29,7 @@
                                 </label>
                             </div>
                         </div>
+                        @endif
                         <button type="submit" class="btn btn-primary pull-right">Envoyer</button>
                     </form>
                 </div>
