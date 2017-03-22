@@ -35,12 +35,13 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-calendar"></span> sTimeTable</a>
+                    <a class="navbar-brand" href="{!! route('home') !!}"><span
+                                class="glyphicon glyphicon-calendar"></span> sTimeTable</a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">Bug tracker (bientôt ...)</a></li>
                         @if(Auth::user())
                             <li><a href="{!! route('user.index') !!}">Utilisateurs</a></li>
                         @endif

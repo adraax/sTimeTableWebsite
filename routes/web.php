@@ -11,12 +11,10 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', ['as' => 'home', function () {
     return view('install');
-});
+}]);
 
 Route::resource('user', 'UserController');
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index');
