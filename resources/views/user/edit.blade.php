@@ -7,7 +7,7 @@
             <div class="panel-heading">Modification d'un utilisateur</div>
             <div class="panel-body">
                 <div class="col-sm-12">
-                    <form method="put" action="{!! route('user.update', $user->id) !!}" class="form-horizontal panel">
+                    <form method="post" action="{!! route('user.update', $user->id) !!}" class="form-horizontal panel">
                         {{csrf_field()}}
                         {{ method_field('PUT') }}
                         <div class="form-group {!! $errors->has('name') ? 'has-error' : '' !!}">
