@@ -28,17 +28,22 @@
                         <td class="text-primary"><strong>{!! $user->name !!}</strong></td>
                         <td><a href="{!! route('user.show', $user->id) !!}" class="btn btn-success btn-block">Voir</a>
                         </td>
-                        <td><a href="{!! route('user.edit', $user->id) !!}"
-                               class="btn btn-warning btn-block">Modifier</a></td>
-                        <td>
-                            <form method="post" action="{!! route('user.destroy', $user->id) !!}">
-                                {{ csrf_field() }}
-                                {{ method_field('DELETE') }}
-                                <button class="btn btn-danger btn-block"
-                                        onclick="return confirm('Vraiment supprimer cet utilisateur ?')">Supprimer
-                                </button>
-                            </form>
-                        </td>
+                        @if(Auth::user()->admin)
+                            <td><a href="{!! route('user.edit', $user->id) !!}"
+                                   class="btn btn-warning btn-block">Modifier</a></td>
+                            <td>
+                                <form method="post" action="{!! route('user.destroy', $user->id) !!}">
+                                    {{ csrf_field() }}
+                                    {{ method_field('DELETE') }}
+                                    <button class="btn btn-danger btn-block"
+                                            onclick="return confirm('Vraiment supprimer cet utilisateur ?')">Supprimer
+                                    </button>
+                                </form>
+                            </td>
+                        @else
+                            <td></td>
+                            <td></td>
+                        @endif
                     </tr>
                 @endforeach
                 </tbody>
