@@ -18,6 +18,14 @@
                     <span class = "label label-success">Résolu</span>
                 @endif
                 {{$bug->title}}
+
+                @if(Auth::user()->admin)
+                    <select name = "select">
+                        <option value = "valeur1">Valeur 1</option>
+                        <option value = "valeur2" selected>Valeur 2</option>
+                        <option value = "valeur3">Valeur 3</option>
+                    </select>
+                @endif
             </div>
             <div class = "panel-body">
                 {{$bug->body}}
