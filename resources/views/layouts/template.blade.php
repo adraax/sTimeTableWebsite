@@ -41,7 +41,7 @@
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                     <ul class="nav navbar-nav">
-                        <li><a href="#">Bug tracker (bientôt ...)</a></li>
+                        <li><a href = "{!! route('bug.index') !!}">Bug Tracker</a></li>
                         @if(Auth::user())
                             <li><a href="{!! route('user.index') !!}">Utilisateurs</a></li>
                         @endif

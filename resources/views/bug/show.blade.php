@@ -23,5 +23,7 @@
             @include('comment.show')
         @endforeach
 
+        @include('comment.create')
+
     </div>
 @endsection
