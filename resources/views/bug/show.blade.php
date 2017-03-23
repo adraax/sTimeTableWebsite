@@ -22,7 +22,7 @@
                 @if(Auth::user()->admin)
                     <div class = "pull-right">
 
-                        <form method = "post" action = "{!! route('user.update', $user->id) !!}"
+                        <form method = "post" action = "{!! route('bug.update', $bug->id) !!}"
                               class = "form-horizontal panel">
                             {{csrf_field()}}
                             {{ method_field('PUT') }}
