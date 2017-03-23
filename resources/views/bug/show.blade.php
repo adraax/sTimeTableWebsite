@@ -22,9 +22,10 @@
                 @if(Auth::user()->admin)
                     <div class = "pull-right">
                         <select name = "select">
-                            <option value = "valeur1">Valeur 1</option>
-                            <option value = "valeur2" selected>Valeur 2</option>
-                            <option value = "valeur3">Valeur 3</option>
+                            <option value = "open">Ouvert</option>
+                            <option value = "investigation">Investigation</option>
+                            <option value = "confirmed">Confirmed</option>
+                            <option value = "close">Close</option>
                         </select>
                     </div>
                     <div class = "clearfix"></div>
