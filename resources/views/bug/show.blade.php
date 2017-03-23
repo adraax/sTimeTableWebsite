@@ -42,7 +42,7 @@
 
                     <input id = "title" name = "title" type = "text" value = "{{$bug->title}}" />
                     <textarea name = "body" id = "body"
-                              value = "{{$bug->body}}"></textarea>
+                              value = "{{$bug->body}}">{{$bug->body}}</textarea>
 
                     <select id = "status" name = "status" form = "updateForm">
                         <option value = "open">Ouvert</option>
