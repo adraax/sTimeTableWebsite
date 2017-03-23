@@ -2,10 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CommentCreateRequest;
+use App\Repositories\CommentRepository;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Config;
 
 class CommentController extends Controller
 {
+    protected $commentRepository;
+
+    protected $nbrPerPage = 10;
+
+    public function __construct(CommentRepository $commentRepository)
+    {
+        $this->commentRepository = $commentRepository;
+        $this->middleware('auth');
+        Carbon::setLocale(Config::get('app.locale'));
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -23,7 +38,7 @@ class CommentController extends Controller
      */
     public function create()
     {
-        //
+        return view('comment.create');
     }
 
     /**
@@ -32,9 +47,11 @@ class CommentController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CommentCreateRequest $request)
     {
-        //
+        $comment = $this->commentRepository->store($request->all());
+
+        return redirect('bug.show', $request->input('bug_id'));
     }
 
     /**

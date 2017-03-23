@@ -16,5 +16,8 @@ Route::get('/', ['as' => 'home', function () {
 }]);
 
 Route::resource('user', 'UserController');
+Route::resource('bug', 'BugController', ['except' => ['edit', 'destroy', 'update']]);
+Route::resource('comment', 'CommentController', ['except' => ['index', 'create', 'destroy', 'show', 'edit', 'update']]);
+
 
 Auth::routes();

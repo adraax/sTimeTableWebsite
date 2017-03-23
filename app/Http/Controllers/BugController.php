@@ -2,10 +2,26 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Bug;
+use App\Http\Requests\BugCreateRequest;
+use App\Repositories\BugRepository;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\Config;
 
 class BugController extends Controller
 {
+    protected $nbrPerPage = 10;
+    private $bugRepository;
+
+    public function __construct(BugRepository $bugRepository)
+    {
+        $this->bugRepository = $bugRepository;
+        $this->middleware('auth');
+        setlocale(LC_TIME, 'French');
+        Carbon::setLocale(Config::get('app.locale'));
+        Carbon::setToStringFormat('d/m/Y à H:i:s');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +29,13 @@ class BugController extends Controller
      */
     public function index()
     {
-        //
+        $bugs = $this->bugRepository->getPaginate($this->nbrPerPage);
+        $links = $bugs->render();
+
+        $open = Bug::where('open', 1)->count();
+        $close = Bug::where('open', 0)->count();
+
+        return view('bug.index', compact('bugs', 'links', 'open', 'close'));
     }
 
     /**
@@ -23,7 +45,7 @@ class BugController extends Controller
      */
     public function create()
     {
-        //
+        return view('bug.create');
     }
 
     /**
@@ -32,9 +54,10 @@ class BugController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BugCreateRequest $request)
     {
-        //
+        $bug = $this->bugRepository->store($request->all());
+        return redirect('bug')->withOk("Le bug " . $bug->title . " a été créé.");
     }
 
     /**
@@ -45,7 +68,9 @@ class BugController extends Controller
      */
     public function show($id)
     {
-        //
+        $bug = $this->bugRepository->getById($id);
+
+        return view('bug.show', compact('bug'));
     }
 
     /**

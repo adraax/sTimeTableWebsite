@@ -2,12 +2,15 @@
 
 namespace App;
 
-use Illuminate\Foundation\Auth\User as Authenticatable;
+//use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Auth\Authenticatable;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable
+class User extends Model
 {
     use Notifiable;
+    use Authenticatable;
 
     /**
      * The attributes that are mass assignable.
@@ -30,5 +33,15 @@ class User extends Authenticatable
     public function setPasswordAttribute($password)
     {
         $this->attributes['password'] = bcrypt($password);
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
+
+    public function bugs()
+    {
+        return $this->hasMany(Bug::class);
     }
 }
