@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use App\Bug;
 use App\Http\Requests\BugCreateRequest;
 use App\Repositories\BugRepository;
-use Carbon\Carbon;
-use Illuminate\Support\Facades\Config;
 
 class BugController extends Controller
 {
@@ -17,9 +15,9 @@ class BugController extends Controller
     {
         $this->bugRepository = $bugRepository;
         $this->middleware('auth');
-        setlocale(LC_TIME, 'French');
+        /*setlocale(LC_TIME, 'French');
         Carbon::setLocale(Config::get('app.locale'));
-        Carbon::setToStringFormat('d/m/Y à H:i:s');
+        Carbon::setToStringFormat('d/m/Y à H:i:s');*/
     }
 
     /**
