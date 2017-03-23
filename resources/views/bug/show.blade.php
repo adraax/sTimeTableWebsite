@@ -21,12 +21,23 @@
 
                 @if(Auth::user()->admin)
                     <div class = "pull-right">
-                        <select name = "select">
-                            <option value = "open">Ouvert</option>
-                            <option value = "investigation">Investigation</option>
-                            <option value = "confirmed">Confirmed</option>
-                            <option value = "close">Close</option>
-                        </select>
+                        <form action = "{{ route('bug.store') }}" method = "post">
+                            {{ csrf_field() }}
+                            <input type = "hidden" name = "user_id" id = "user_id" value = "{{auth()->user()->id}}">
+
+                            <input id = "title" name = "title" type = "hidden" value = "{{$bug->title}}" />
+                            <textarea style = "display:none;" name = "body" id = "body"
+                                      value = "{{$bug->body}}"></textarea>
+
+                            <select id = "status" name = "status">
+                                <option value = "open">Ouvert</option>
+                                <option value = "investigation">Investigation</option>
+                                <option value = "confirmed">Confirmed</option>
+                                <option value = "close">Close</option>
+                            </select>
+                            <button type = "submit" class = "btn btn-primary pull-right">Envoyer</button>
+                        </form>
+
                     </div>
                     <div class = "clearfix"></div>
                 @endif
