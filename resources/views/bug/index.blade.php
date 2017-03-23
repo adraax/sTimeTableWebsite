@@ -21,13 +21,13 @@
         </div>
         <ul class = "list-group">
             @forelse($bugs as $bug)
-                @if($bugs->status == "open")
+                @if($bug->status == "open")
                     <span class = "label label-danger">Ouvert</span>
-                @elseif($bugs->status == "investigation")
+                @elseif($bug->status == "investigation")
                     <span class = "label label-warning">Investigation</span>
-                @elseif($bugs->status == "confirmed")
+                @elseif($bug->status == "confirmed")
                     <span class = "label label-info">Confirmé</span>
-                @elseif($bugs->status == "close")
+                @elseif($bug->status == "close")
                     <span class = "label label-success">Résolu</span>
                 @endif
                 <li class = "list-group-item">
