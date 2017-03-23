@@ -50,7 +50,7 @@
                         <option value = "confirmed">Confirmed</option>
                         <option value = "close">Close</option>
                     </select>
-                    <input type = "submit" class = "btn btn-primary pull-right">Envoyer</input>
+                    <input type = "submit" class = "btn btn-primary pull-right">submit</input>
                 </form>
             </div>
         </div>
