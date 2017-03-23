@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Bug;
 use App\Http\Requests\BugCreateRequest;
+use App\Http\Requests\BugUpdateRequest;
 use App\Repositories\BugRepository;
 
 class BugController extends Controller
@@ -89,9 +90,10 @@ class BugController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(BugUpdateRequest $request, $id)
     {
-        //
+        $this->bugRepository->update($id, $request->all());
+        return redirect('bug');
     }
 
     /**
