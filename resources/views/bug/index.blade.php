@@ -20,20 +20,20 @@
             </div>
         </div>
         <ul class = "list-group">
-            @forelse($bugs as $bug)
-                @if($bug->status == "open")
-                    <span class = "label label-danger">Ouvert</span>
-                @elseif($bug->status == "investigation")
-                    <span class = "label label-warning">Investigation</span>
-                @elseif($bug->status == "confirmed")
-                    <span class = "label label-info">Confirmé</span>
-                @elseif($bug->status == "close")
-                    <span class = "label label-success">Résolu</span>
-                @endif
-                <li class = "list-group-item">
-                    {{$bug->title}}</a> - par <a
+            <li class = "list-group-item">
+                @forelse($bugs as $bug)
+                    @if($bug->status == "open")
+                        <span class = "label label-danger">Ouvert</span>
+                    @elseif($bug->status == "investigation")
+                        <span class = "label label-warning">Investigation</span>
+                    @elseif($bug->status == "confirmed")
+                        <span class = "label label-info">Confirmé</span>
+                    @elseif($bug->status == "close")
+                        <span class = "label label-success">Résolu</span>
+                    @endif
+                    <a href = "{!! route('bug.show', $bug->id) !!}"> {{$bug->title}}</a> - par <a
                             href = "{!! route('user.show', $bug->user->id ) !!}">{{$bug->user->name}}</a>
-                </li>
+            </li>
             @empty
                 <li class = "list-group-item">Pas (encore !) de bugs.</li>
             @endforelse
