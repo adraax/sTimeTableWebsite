@@ -21,7 +21,7 @@
 
                 @if(Auth::user()->admin)
                     <div class = "pull-right">
-                        <form action = "{{ route('bug.update', $bug->id) }}" method = "post">
+                        <form action = "{{ route('bug.update', $bug->id) }}" method = "post" id = "updateForm">
                             {{ csrf_field() }}
                             {{method_field('PUT')}}
                             <input type = "hidden" name = "user_id" id = "user_id" value = "{{auth()->user()->id}}">
@@ -30,7 +30,7 @@
                             <textarea style = "display:none;" name = "body" id = "body"
                                       value = "{{$bug->body}}"></textarea>
 
-                            <select id = "status" name = "status">
+                            <select id = "status" name = "status" form = "updateForm">
                                 <option value = "open">Ouvert</option>
                                 <option value = "investigation">Investigation</option>
                                 <option value = "confirmed">Confirmed</option>
