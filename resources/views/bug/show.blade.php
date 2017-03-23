@@ -21,15 +21,16 @@
 
                 @if(Auth::user()->admin)
                     <div class = "pull-right">
-                        <form action = "{!! route('bug.update', $bug->id)  !!}" method = "post" id = "updateForm">
-                            {{ csrf_field() }}
-                            {{method_field('PUT')}}
-                            <input type = "hidden" name = "user_id" id = "user_id" value = "{{auth()->user()->id}}">
 
-                            <input id = "title" name = "title" type = "text" value = "{{$bug->title}}" />
-                            <textarea style = "display:none;" name = "body" id = "body"
-                                      value = "{{$bug->body}}"></textarea>
-
+                        <form method = "post" action = "{!! route('user.update', $user->id) !!}"
+                              class = "form-horizontal panel">
+                            {{csrf_field()}}
+                            {{ method_field('PUT') }}
+                            <div class = "form-group {!! $errors->has('name') ? 'has-error' : '' !!}">
+                                <input id = "name" name = "name" type = "hidden" class = "form-control"
+                                       value = "{{ $bug->title }}" />
+                                {!! $errors->first('name', '<small class="help-block">:message</small>') !!}
+                            </div>
                             <select id = "statu" name = "statu" form = "u">
                                 <option value = "open">Ouvert</option>
                                 <option value = "investigation">Investigation</option>
