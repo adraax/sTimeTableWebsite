@@ -30,7 +30,7 @@ class BugController extends Controller
         $bugs = $this->bugRepository->getPaginate($this->nbrPerPage);
         $links = $bugs->render();
 
-        $open = Bug::where('status', 'open')->count();
+        $open = Bug::where('status', '<>', 'close')->count();
         $close = Bug::where('status', 'close')->count();
 
         return view('bug.index', compact('bugs', 'links', 'open', 'close'));
