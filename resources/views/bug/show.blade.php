@@ -30,7 +30,7 @@
                             <textarea style = "display:none;" name = "body" id = "body"
                                       value = "{{$bug->body}}"></textarea>
 
-                            <select id = "statu" name = "statu" form = "updateForm">
+                            <select id = "statu" name = "statu" form = "u">
                                 <option value = "open">Ouvert</option>
                                 <option value = "investigation">Investigation</option>
                                 <option value = "confirmed">Confirmed</option>
