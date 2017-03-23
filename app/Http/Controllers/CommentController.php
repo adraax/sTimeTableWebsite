@@ -51,7 +51,7 @@ class CommentController extends Controller
     {
         $comment = $this->commentRepository->store($request->all());
 
-        return redirect('bug.show', ['id' => $request->input('bug_id')]);
+        return redirect('bug/' . $request->input('bug_id'));
     }
 
     /**
