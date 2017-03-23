@@ -93,7 +93,7 @@ class BugController extends Controller
     public function update(BugUpdateRequest $request, $id)
     {
         $this->bugRepository->update($id, $request->all());
-        return redirect('/bug');
+        return redirect('/');
     }
 
     /**
