@@ -23,7 +23,7 @@ class Bug extends Model
 
     public function getDate()
     {
-        setlocale(LC_TIME, 'fr_FR');
+        setlocale(LC_TIME, 'French');
         //Carbon::setLocale('fr');
         return Carbon::now()->formatLocalized('%A %d %B %Y');
     }
