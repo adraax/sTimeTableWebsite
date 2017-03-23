@@ -20,11 +20,14 @@
                 {{$bug->title}}
 
                 @if(Auth::user()->admin)
-                    <select name = "select">
-                        <option value = "valeur1">Valeur 1</option>
-                        <option value = "valeur2" selected>Valeur 2</option>
-                        <option value = "valeur3">Valeur 3</option>
-                    </select>
+                    <div class = "pull-right">
+                        <select name = "select">
+                            <option value = "valeur1">Valeur 1</option>
+                            <option value = "valeur2" selected>Valeur 2</option>
+                            <option value = "valeur3">Valeur 3</option>
+                        </select>
+                    </div>
+                    <div class = "clearfix"></div>
                 @endif
             </div>
             <div class = "panel-body">
