@@ -21,7 +21,7 @@
 
                 @if(Auth::user()->admin)
                     <div class = "pull-right">
-                        <form action = "{{ route('bug.update', $bug->id) }}" method = "post" id = "updateForm">
+                        <form action = "{!! route('bug.update', $bug->id)  !!}" method = "post" id = "updateForm">
                             {{ csrf_field() }}
                             {{method_field('PUT')}}
                             <input type = "hidden" name = "user_id" id = "user_id" value = "{{auth()->user()->id}}">
