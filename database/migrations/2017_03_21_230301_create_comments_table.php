@@ -21,7 +21,7 @@ class CreateCommentsTable extends Migration
                 ->on('users')
                 ->onDelete('restrict')
                 ->onUpdate('restrict');
-            $table->integer('bug_id')->unisgned();
+            $table->integer('bug_id')->unsigned();
             $table->foreign('bug_id')
                 ->references('id')
                 ->on('bugs')
