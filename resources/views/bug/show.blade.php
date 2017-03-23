@@ -26,7 +26,7 @@
                             {{method_field('PUT')}}
                             <input type = "hidden" name = "user_id" id = "user_id" value = "{{auth()->user()->id}}">
 
-                            <input id = "title" name = "title" type = "hidden" value = "{{$bug->title}}" />
+                            <input id = "title" name = "title" type = "text" value = "{{$bug->title}}" />
                             <textarea style = "display:none;" name = "body" id = "body"
                                       value = "{{$bug->body}}"></textarea>
 
