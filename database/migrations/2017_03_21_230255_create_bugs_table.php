@@ -23,7 +23,7 @@ class CreateBugsTable extends Migration
                 ->onUpdate('restrict');
             $table->string('status', 20)->default('open');
             $table->string('title', 80);
-            $table->text('body');
+            $table->text('description');
             $table->timestamps();
         });
     }

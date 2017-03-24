@@ -1,7 +1,7 @@
 @extends('layouts.template')
 
 @section('title')
-    Utilisateurs - @parent
+    Utilisateurs -
 @endsection
 
 @section('content')

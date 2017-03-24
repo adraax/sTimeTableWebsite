@@ -27,7 +27,7 @@ class CreateCommentsTable extends Migration
                 ->on('bugs')
                 ->onDelete('restrict')
                 ->onUpdate('restrict');
-            $table->text('body');
+            $table->text('content');
             $table->timestamps();
         });
     }

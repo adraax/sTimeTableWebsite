@@ -25,7 +25,7 @@ class BugCreateRequest extends FormRequest
     {
         return [
             'title' => 'required|max:255',
-            'body' => 'required|min:1',
+            'description' => 'required|min:1',
         ];
     }
 }

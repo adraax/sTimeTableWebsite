@@ -1,6 +1,6 @@
 @extends('layouts.template')
 @section('title')
-    BugTracker
+    BugTracker -
 @endsection
 
 @section('content')
@@ -27,8 +27,8 @@
                             <input type = "hidden" name = "user_id" id = "user_id" value = "{{auth()->user()->id}}">
 
                             <input id = "title" name = "title" type = "hidden" value = "{{$bug->title}}" />
-                            <textarea name = "body" id = "body" style = "display:none;"
-                                      value = "{{$bug->body}}">{{$bug->body}}</textarea>
+                            <textarea name = "description" id = "description" style = "display:none;"
+                                      value = "{{$bug->description}}">{{$bug->description}}</textarea>
 
                             <select id = "status" name = "status" form = "updateForm">
                                 <option value = "open">Ouvert</option>
@@ -43,11 +43,12 @@
                 @endif
             </div>
             <div class = "panel-body">
-                {{$bug->body}}
+                {{$bug->description}}
             </div>
             <div class = "panel-footer">
                 <div class = "pull-right">
-                    Le {{$bug->getDate()}} par {{$bug->user->name}}
+                    {{$bug->getDate()}} par <a
+                            href = "{!! route('user.show', $bug->user->id) !!}">{{$bug->user->name}}</a>
                 </div>
                 <div class = "clearfix"></div>
             </div>
@@ -58,6 +59,5 @@
         @endforeach
 
         @include('comment.create')
-
     </div>
 @endsection

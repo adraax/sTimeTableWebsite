@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Bug extends Model
 {
     protected $fillable = [
-        'title', 'body', 'user_id', 'status'
+        'title', 'description', 'user_id', 'status'
     ];
 
     public function user()

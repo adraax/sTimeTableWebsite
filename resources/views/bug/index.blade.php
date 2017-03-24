@@ -1,7 +1,7 @@
 @extends('layouts.template')
 
 @section('title')
-    BugTracker
+    BugTracker -
 @endsection
 
 @section('content')
@@ -13,8 +13,8 @@
                                                                                                 bug</a>
         </div>
         <ul class = "list-group">
-            <li class = "list-group-item">
-                @forelse($bugs as $bug)
+            @forelse($bugs as $bug)
+                <li class = "list-group-item">
                     @if($bug->status == "open")
                         <span class = "label label-danger">Ouvert</span>
                     @elseif($bug->status == "investigation")
@@ -26,7 +26,7 @@
                     @endif
                     <a href = "{!! route('bug.show', $bug->id) !!}"> {{$bug->title}}</a> - par <a
                             href = "{!! route('user.show', $bug->user->id ) !!}">{{$bug->user->name}}</a>
-            </li>
+                </li>
             @empty
                 <li class = "list-group-item">Pas (encore !) de bugs.</li>
             @endforelse

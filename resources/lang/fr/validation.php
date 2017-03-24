@@ -144,6 +144,7 @@ return [
         'time' => 'Heure',
         'available' => 'Disponible',
         'size' => 'Taille',
+        'body' => 'Description',
     ],
 
 ];
