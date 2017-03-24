@@ -21,7 +21,7 @@ class CreateBugsTable extends Migration
                 ->on('users')
                 ->onDelete('restrict')
                 ->onUpdate('restrict');
-            $table->string('status')->default('open');
+            $table->string('status', 20)->default('open');
             $table->string('title', 80);
             $table->text('body');
             $table->timestamps();
