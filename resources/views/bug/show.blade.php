@@ -21,8 +21,23 @@
 
                 @if(Auth::user()->admin)
                     <div class = "pull-right">
+                        <form action = "{{ route('bug.update', $bug->id) }}" method = "post" id = "updateForm">
+                            {{ csrf_field() }}
+                            {{method_field('PUT')}}
+                            <input type = "hidden" name = "user_id" id = "user_id" value = "{{auth()->user()->id}}">
 
+                            <input id = "title" name = "title" type = "hidden" value = "{{$bug->title}}" />
+                            <textarea name = "body" id = "body" style = "display:none;"
+                                      value = "{{$bug->body}}">{{$bug->body}}</textarea>
 
+                            <select id = "status" name = "status" form = "updateForm">
+                                <option value = "open">Ouvert</option>
+                                <option value = "investigation">Investigation</option>
+                                <option value = "confirmed">Confirmed</option>
+                                <option value = "close">Close</option>
+                            </select>
+                            <input type = "submit" class = "btn btn-primary pull-right"></input>
+                        </form>
                     </div>
                     <div class = "clearfix"></div>
                 @endif
@@ -35,23 +50,6 @@
                     Le {{$bug->getDate()}} par {{$bug->user->name}}
                 </div>
                 <div class = "clearfix"></div>
-                <form action = "{{ route('bug.update', $bug->id) }}" method = "post" id = "updateForm">
-                    {{ csrf_field() }}
-                    {{method_field('PUT')}}
-                    <input type = "hidden" name = "user_id" id = "user_id" value = "{{auth()->user()->id}}">
-
-                    <input id = "title" name = "title" type = "text" value = "{{$bug->title}}" />
-                    <textarea name = "body" id = "body"
-                              value = "{{$bug->body}}">{{$bug->body}}</textarea>
-
-                    <select id = "status" name = "status" form = "updateForm">
-                        <option value = "open">Ouvert</option>
-                        <option value = "investigation">Investigation</option>
-                        <option value = "confirmed">Confirmed</option>
-                        <option value = "close">Close</option>
-                    </select>
-                    <input type = "submit" class = "btn btn-primary pull-right">submit</input>
-                </form>
             </div>
         </div>
 

@@ -19,7 +19,7 @@
                         </div>
                         <div class="form-group {!! $errors->has('email') ? 'has-error' : '' !!}">
                             <input type="email" name="email" id="email" class="form-control" placeholder="Email">
-                            {!! $errors->first('name', '<small class="help-block">:message</small>') !!}
+                            {!! $errors->first('email', '<small class="help-block">:message</small>') !!}
                         </div>
                         <div class="form-group {!! $errors->has('password') ? 'has-error' : '' !!}">
                             <input type="password" name="password" id="password" class="form-control"

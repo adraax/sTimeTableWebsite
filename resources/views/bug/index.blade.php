@@ -6,18 +6,11 @@
 
 @section('content')
     <div class = "col-m-offset-1 col-m-10">
-        <div class = "row">
-            <div class = "col-m-8">
-                <div class = "pull-left">
-                    <span class = "glyphicon glyphicon-remove"></span> {{$open}} Ouverts &nbsp; <span
-                            class = "glyphicon glyphicon-ok"></span> {{$close}} résolus
-                </div>
-                <div class = "pull-right">
-                    <button class = "btn btn-default">
-                        <a href = "{!! route('bug.create') !!}">Créer un rapport de bug</a>
-                    </button>
-                </div>
-            </div>
+        <div style = "margin-bottom: 8px;">
+            <span class = "glyphicon glyphicon-remove"></span> {{$open}} Ouverts &nbsp; <span
+                    class = "glyphicon glyphicon-ok"></span> {{$close}} résolus
+            <a href = "{!! route('bug.create') !!}" class = "btn btn-default btn-xs pull-right">Créer un rapport de
+                                                                                                bug</a>
         </div>
         <ul class = "list-group">
             <li class = "list-group-item">
