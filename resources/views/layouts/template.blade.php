@@ -15,6 +15,7 @@
         <link href = "https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel = "stylesheet"
               integrity = "sha384-HzUaiJdCTIY/RL2vDPRGdEQHHahjzwoJJzGUkYjHVzTwXFQ2QN/nVgX7tzoMW3Ov"
               crossorigin = "anonymous">
+        <link rel = "stylesheet" href = "{{URL::asset('css/style.css')}}">
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -94,10 +95,10 @@
 
 
         <footer class = "blog-footer">
-            <p>Blog template built for <a href = "http://getbootstrap.com">Bootstrap</a> by <a
-                        href = "https://twitter.com/mdo">@mdo</a>.</p>
+            <p>Site de la TeamPluto pour l'application sTimeTable. Réalisé par <a
+                        href = "{!! route('user.show', 1) !!}">Olivier Merlin</a></p>
             <p>
-                <a href = "#">Back to top</a>
+                <a href = "#">Retourner en haut</a>
             </p>
         </footer>
 
