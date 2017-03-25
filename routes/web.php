@@ -12,8 +12,20 @@
 */
 
 Route::get('/', ['as' => 'home', function () {
-    return view('install');
+    return view('home');
 }]);
+
+Route::get('/wiki/installation', function () {
+    return view('construction');
+})->name('wiki.installation');
+
+Route::get('/wiki/connection', function () {
+    return view('construction');
+})->name('wiki.connection');
+
+Route::get('/wiki/timetable', function () {
+    return view('construction');
+})->name('wiki.timetable');
 
 Route::resource('user', 'UserController');
 Route::resource('bug', 'BugController', ['except' => ['edit', 'destroy']]);
