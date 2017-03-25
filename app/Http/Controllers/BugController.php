@@ -81,7 +81,7 @@ class BugController extends Controller
     {
 
         $this->bugRepository->update($id, $request->all());
-        return redirect('bug/' . $id);
+        return redirect('bug');
 
         //dd($request);
     }
