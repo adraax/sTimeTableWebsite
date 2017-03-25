@@ -5,6 +5,12 @@
 @endsection
 
 @section('content')
+    @if(!Auth::check())
+        <div class="alert alert-dismissible alert-info">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            Par mesure de sécurité, vous devez vous inscrire et être connecté pour poster un rapport de bug.
+        </div>
+    @endif
     <div class="blog-header">
         <h1 class="blog-title">sTimeTable Wiki</h1>
         <p class="lead blog-description">sTimeTable blablabla bullshit</p>
