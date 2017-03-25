@@ -34,7 +34,7 @@
         <table class="table table-striped">
             @forelse($bugs as $bug)
                 <tr>
-                    <td class="pull-left">
+                    <td>
                         @if($bug->status == "open")
                             <span class="label label-danger">Ouvert</span>
                         @elseif($bug->status == "investigation")
@@ -45,11 +45,10 @@
                             <span class="label label-success">Résolu</span>
                         @endif
                     </td>
-                    <td width="100%">
-                        <a href="{!! route('bug.show', $bug->id) !!}"> {{$bug->title}}</a>
-                    </td>
-                    <td class="pull-right">
-                        par <a href="{!! route('user.show', $bug->user->id ) !!}">{{$bug->user->name}}</a>
+                    <td style="width: 100%">
+                        <a href="{!! route('bug.show', $bug->id) !!}"> {{$bug->title}}</a><br>
+                        Ouvert {{$bug->getDiffDate()}} par <a
+                                href="{!! route('user.show', $bug->user->id ) !!}">{{$bug->user->name}}</a>
                     </td>
                 </tr>
             @empty

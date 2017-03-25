@@ -19,8 +19,8 @@ body {
     color: #555;
 }
 
-td {
-    min-width: 90px;
+.little {
+    color: #777;
 }
 
 h1, .h1,

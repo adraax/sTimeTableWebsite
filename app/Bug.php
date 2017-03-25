@@ -27,4 +27,10 @@ class Bug extends Model
         //Carbon::setLocale('fr');
         return Carbon::now()->formatLocalized('%A %d %B %Y');
     }
+
+    public function getDiffDate()
+    {
+        Carbon::setLocale('fr');
+        return $this->created_at->diffForHumans();
+    }
 }
