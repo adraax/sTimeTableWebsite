@@ -24,7 +24,7 @@
                         <form action = "{{ route('bug.update', $bug->id) }}" method = "post" id = "updateForm">
                             {{ csrf_field() }}
                             {{method_field('PUT')}}
-                            <input type="hidden" name="user_id" id="user_id" value="{{$bug->user()->id}}">
+                            <input type="hidden" name="user_id" id="user_id" value="{{$bug->user->id}}">
 
                             <input id = "title" name = "title" type = "hidden" value = "{{$bug->title}}" />
                             <textarea name = "description" id = "description" style = "display:none;"
