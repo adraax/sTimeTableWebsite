@@ -19,8 +19,9 @@
                             {!! $errors->first('title', '<small class="help-block">:message</small>') !!}
                         </div>
                         <div class = "{!! $errors->has('description') ? 'has-error' : '' !!}">
-                            <textarea class = "form-group" name = "body" id = "body" style = "width: 100%;" rows = "10"
-                                      placeholder = "Description">{{old('body')}}</textarea>
+                            <textarea class="form-group" name="description" id="description" style="width: 100%;"
+                                      rows="10"
+                                      placeholder="Description">{{old('description')}}</textarea>
                             {!! $errors->first('body', '<small class="help-block">:message</small>') !!}
                         </div>
                         <button type = "submit" class = "btn btn-primary pull-right">Envoyer</button>
