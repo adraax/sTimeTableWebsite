@@ -1,6 +1,6 @@
 <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
     <div class="sidebar-module sidebar-module-inset">
-        <h4>About</h4>
+        <h4>À propos</h4>
         <p>
             Gérez votre emploi du temps depuis votre smartphone, ajoutez vos enseignants et notifiez-les d'un
             retard ou d'une absence.

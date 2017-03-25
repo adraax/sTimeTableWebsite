@@ -16,7 +16,7 @@ Route::get('/', ['as' => 'home', function () {
 }]);
 
 Route::get('/wiki/installation', function () {
-    return view('construction');
+    return view('wiki.install');
 })->name('wiki.installation');
 
 Route::get('/wiki/connection', function () {

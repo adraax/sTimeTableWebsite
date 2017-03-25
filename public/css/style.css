@@ -2,11 +2,11 @@ html, body {
     height: 100%;
 }
 
-.container {
-    min-height: 72%;
+#gif-widget {
+    height: 500px;
 }
 
-#gif-widget {
+.wiki-image {
     height: 500px;
 }
 
@@ -21,6 +21,16 @@ body {
 
 .little {
     color: #777;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
 }
 
 h1, .h1,
