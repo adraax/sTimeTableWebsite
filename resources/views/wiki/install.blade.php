@@ -1,16 +1,8 @@
 @extends('layouts.template')
-
 @section('title')
-    Installation
+    Wiki -
 @endsection
-
 @section('content')
-    @if(!Auth::check())
-        <div class="alert alert-dismissible alert-info">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-            Par mesure de sécurité, vous devez vous inscrire et être connecté pour poster un rapport de bug.
-        </div>
-    @endif
     <div class="blog-header">
         <h1 class="blog-title">sTimeTable Wiki</h1>
         <p class="lead blog-description">Application de gestion d'emploi du temps</p>
@@ -18,15 +10,8 @@
 
     <div class="row">
         <div class="col-sm-8 blog-main">
-
             <div class="blog-post">
-                <h2 class="blog-post-title">À venir</h2>
-
-                <img id="gif-widget" src="{{URL::asset('images/widget.gif')}}" alt="">
-            </div><!-- /.blog-post -->
-
-            <div class="blog-post">
-                <h2 class="blog-post-title">Patch notes</h2>
+                <h2 class="blog-post-title">Installation</h2>
                 <h3>v0.3</h3>
                 <ul>
                     <li>Correction d'un bug sur de notification</li>
@@ -39,8 +24,7 @@
             </div><!-- /.blog-post -->
 
         </div><!-- /.blog-main -->
-
         @include('layouts.nav')
+    </div>
 
-    </div><!-- /.row -->
 @endsection
