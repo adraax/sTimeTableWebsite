@@ -7,7 +7,7 @@
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <meta name="description" content="">
         <meta name="author" content="">
-        <link rel="icon" href="{{URL::asset('images/ic_launcher.png')}}">
+        <link rel="icon" href="{{URL::asset('images/ic_launcher.pngp')}}">
 
         <title>@yield('title') sTimeTable</title>
 
@@ -43,14 +43,14 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                     <ul class="nav navbar-nav">
                         <li><a href="{!! route('home') !!}">Accueil</a></li>
+                        <li><a href="{!! route('bug.index') !!}"><span
+                                        class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                Bug
+                                Tracker</a>
+                        </li>
                         @if(Auth::user())
                             <li><a href="{!! route('user.index') !!}"><span class="glyphicon glyphicon-user"
                                                                             aria-hidden="true"></span> Utilisateurs</a>
-                            </li>
-                            <li><a href="{!! route('bug.index') !!}"><span
-                                            class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                                    Bug
-                                    Tracker</a>
                             </li>
                         @endif
                     </ul>

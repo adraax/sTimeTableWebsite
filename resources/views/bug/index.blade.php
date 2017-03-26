@@ -5,9 +5,18 @@
 @endsection
 
 @section('content')
+    @if(!Auth::check())
+        <div class="alert alert-dismissible alert-info">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            Par mesure de sécurité, vous devez vous inscrire et être connecté pour poster un rapport de bug ou un
+            commentaire.
+        </div>
+    @endif
     <span class="glyphicon glyphicon-remove"></span> {{$open}} Ouverts &nbsp; <span
             class="glyphicon glyphicon-ok"></span> {{$close}} résolus
-    <a href="{!! route('bug.create') !!}" class="btn btn-default btn-xs pull-right">Créer un rapport de bug</a>
+    @if(Auth::user())
+        <a href="{!! route('bug.create') !!}" class="btn btn-default btn-xs pull-right">Créer un rapport de bug</a>
+    @endif
     <div class="clearfix"></div>
     <div class="panel panel-default">
         <table class="table table-striped">
