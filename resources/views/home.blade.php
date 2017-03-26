@@ -23,7 +23,7 @@
                 <h2 class="blog-post-title">Patch notes</h2>
                 <h3>v0.3</h3>
                 <ul>
-                    <li>Correction d'un bug sur de notification</li>
+                    <li>Correction d'un bug de notification</li>
                 </ul>
 
                 <h3>v0.1-Amethyst</h3>
