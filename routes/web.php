@@ -31,5 +31,6 @@ Route::resource('user', 'UserController');
 Route::resource('bug', 'BugController', ['except' => ['edit', 'destroy']]);
 Route::resource('comment', 'CommentController', ['except' => ['index', 'create', 'destroy', 'show', 'edit', 'update']]);
 
+Route::get('/error', 'ErrorMessageController@index')->name('error');
 
 Auth::routes();
