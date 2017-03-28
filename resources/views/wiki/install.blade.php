@@ -13,8 +13,8 @@
             <div class="blog-post">
                 <h2 class="blog-post-title">Installation</h2>
                 <p>
-                    L'application peut-être installée sur tous les téléphones Android disposant d'une version supérieure
-                    à Android 4.4 KitKat
+                    L'application peut-être installée sur tous les téléphones Android disposant de la version Android
+                    4.4 KitKat ou supérieure.
                     <br>
                     Lors de l'installation sur une version < 6.0, vous devriez voir apparaitre la fenêtre suivante :
                     <br>
@@ -23,7 +23,8 @@
                 <br>
                 <p>
                     <br>
-                    Sur une version > 6.0 l'affichage sera similaire, les autorisations nécessaires aux fonctionnement
+                    Sur une version 6.0 ou supérieure l'affichage sera similaire, les autorisations nécessaires aux
+                    fonctionnement
                     de l'application ne seront pas affichées.
                 </p>
                 <h3>Autorisations</h3>
