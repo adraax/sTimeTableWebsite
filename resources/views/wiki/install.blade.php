@@ -14,7 +14,7 @@
                 <h2 class="blog-post-title">Installation</h2>
                 <p>
                     L'application peut-être installée sur tous les téléphones Android disposant de la version Android
-                    4.4 KitKat ou supérieure.
+                    4.4 KitKat ou supérieur.
                     <br>
                     Lors de l'installation sur une version < 6.0, vous devriez voir apparaitre la fenêtre suivante :
                     <br>
@@ -23,7 +23,7 @@
                 <br>
                 <p>
                     <br>
-                    Sur une version 6.0 ou supérieure l'affichage sera similaire, les autorisations nécessaires aux
+                    Sur une version 6.0 ou supérieur l'affichage sera similaire, les autorisations nécessaires aux
                     fonctionnement
                     de l'application ne seront pas affichées.
                 </p>
