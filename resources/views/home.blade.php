@@ -1,7 +1,7 @@
 @extends('layouts.template')
 
 @section('title')
-    Installation
+    Accueil -
 @endsection
 
 @section('content')
