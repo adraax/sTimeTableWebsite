@@ -17,7 +17,6 @@
                 <h2 class="blog-post-title">À venir</h2>
 
                 <img id="gif-widget" src="{{URL::asset('images/widget.gif')}}" alt="">
-                <img id="gif-widget" src="{{URL::asset('images/itineraire.gif')}}" alt="">
             </div><!-- /.blog-post -->
 
             <div class="blog-post">
