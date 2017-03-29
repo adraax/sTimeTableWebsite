@@ -34,3 +34,12 @@ Route::resource('comment', 'CommentController', ['except' => ['index', 'create',
 Route::get('/error', 'ErrorMessageController@index')->name('error');
 
 Auth::routes();
+
+Route::get('/sparkpost', function () {
+    Mail::send('emails.test', [], function ($message) {
+        $message
+            ->from('team-pluto@mail.adraax.eu', 'Team Pluto')
+            ->to('merlin.olivier71@gmail.com', 'Adraax')
+            ->subject('From SparkPost with ❤');
+    });
+});
