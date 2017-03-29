@@ -16,7 +16,7 @@
         Afin de corriger les bugs le plus efficacement possible, des mails automatiques seront bientôt envoyés par le
         site.
         <br>
-        Vous pourrez régler vos paramètres de reception sur votre profil.
+        Vous pourrez régler vos paramètres de réception sur votre profil.
     </div>
     <div class="blog-header">
         <h1 class="blog-title">sTimeTable Wiki</h1>
