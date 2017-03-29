@@ -55,7 +55,7 @@
                         </li>
                         @if(Auth::user())
                             <li><a href="{!! route('user.index') !!}"><span class="glyphicon glyphicon-user"
-                                                                            aria-hidden="true"></span> Utilisateurs</a>
+                                                                            aria-hidden="true"> </span> Utilisateurs</a>
                             </li>
                         @endif
                     </ul>
@@ -78,7 +78,7 @@
                                         <a href="{{ route('logout') }}"
                                            onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                            Déconnexion
+                                            <span class="glyphicon glyphicon-off"> </span> Déconnexion
                                         </a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST"
