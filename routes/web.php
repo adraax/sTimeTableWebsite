@@ -15,6 +15,8 @@ Route::get('/', ['as' => 'home', function () {
     return view('home');
 }]);
 
+Route::get('/mail', 'HomeController@mail');
+
 Route::get('/wiki/installation', function () {
     return view('wiki.install');
 })->name('wiki.installation');

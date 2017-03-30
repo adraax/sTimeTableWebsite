@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
+use Illuminate\Support\Facades\Mail;
+
 class HomeController extends Controller
 {
     /**
@@ -11,7 +14,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
     }
 
     /**
@@ -22,5 +25,15 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function mail()
+    {
+        $user = User::find(1)->toArray();
+        Mail::send('email.mailEvent', $user, function ($message) use ($user) {
+            $message->to("merlin.olivier71@gmail.com");
+            $message->subject('Mailgun Testing');
+        });
+        dd('Mail Send Successfully');
     }
 }
