@@ -16,7 +16,7 @@ class NewBug extends Mailable
     /**
      * Create a new message instance.
      *
-     * @return void
+     * @param Bug $bug
      */
     public function __construct(Bug $bug)
     {

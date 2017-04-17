@@ -30,10 +30,12 @@ Route::get('/wiki/timetable', function () {
 })->name('wiki.timetable');
 
 Route::resource('user', 'UserController');
-Route::resource('bug', 'BugController', ['except' => ['edit', 'destroy']]);
-Route::resource('comment', 'CommentController', ['except' => ['index', 'create', 'destroy', 'show', 'edit', 'update']]);
+Route::resource('bug', 'BugController', ['except' => ['destroy']]);
+Route::resource('comment', 'CommentController', ['except' => ['index', 'create', 'destroy', 'show']]);
 
 Route::get('/error', 'ErrorMessageController@index')->name('error');
+Route::get('/error/add', 'ErrorMessageController@add')->name('error.add');
+Route::post('/error', 'ErrorMessageController@store')->name('error.save');
 
 Auth::routes();
 

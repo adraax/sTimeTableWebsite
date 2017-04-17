@@ -16,5 +16,12 @@ class UsersTableSeeder extends Seeder
                 'admin' => rand(0, 1)
             ]);
         }
+
+        DB::table('users')->insert([
+            'name' => 'Olivier',
+            'email' => 'merlin.olivier71@gmail.com',
+            'password' => bcrypt('03011997'),
+            'admin' => true
+        ]);
     }
 }

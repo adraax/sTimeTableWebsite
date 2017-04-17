@@ -73,7 +73,9 @@ class CommentController extends Controller
      */
     public function edit($id)
     {
-        //
+        $comment = $this->commentRepository->getById($id);
+
+        return view('comment.edit', compact('comment'));
     }
 
     /**
@@ -85,7 +87,8 @@ class CommentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->commentRepository->update($id, $request->all());
+        return redirect('bug');
     }
 
     /**

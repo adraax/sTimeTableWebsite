@@ -74,7 +74,9 @@ class BugController extends Controller
 
     public function edit($id)
     {
-        //
+        $bug = $this->bugRepository->getById($id);
+
+        return view('bug.update', compact('bug'));
     }
 
     public function update(BugUpdateRequest $request, $id)
@@ -82,8 +84,6 @@ class BugController extends Controller
 
         $this->bugRepository->update($id, $request->all());
         return redirect('bug');
-
-        //dd($request);
     }
 
     /**

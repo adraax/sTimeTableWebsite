@@ -16,9 +16,13 @@ class Comment extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function bug()
+    {
+        return $this->belongsTo(Bug::class);
+    }
+
     public function getDiffDate()
     {
-        Carbon::setLocale('fr');
         return $this->created_at->diffForHumans();
     }
 }

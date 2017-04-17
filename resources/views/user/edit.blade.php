@@ -14,7 +14,7 @@
                 <div class="col-sm-12">
                     <form method="post" action="{!! route('user.update', $user->id) !!}" class="form-horizontal panel">
                         {{csrf_field()}}
-                        {{ method_field('PUT') }}
+
                         <div class="form-group {!! $errors->has('name') ? 'has-error' : '' !!}">
                             <input id="name" name="name" type="text" class="form-control" value="{{ $user->name }}"/>
                             {!! $errors->first('name', '<small class="help-block">:message</small>') !!}

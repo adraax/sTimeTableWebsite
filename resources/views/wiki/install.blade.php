@@ -12,6 +12,7 @@
         <div class="col-sm-8 blog-main">
             <div class="blog-post">
                 <h2 class="blog-post-title">Installation</h2>
+                <p class="blog-post-meta">Modifié pour la dernière fois le {{\Carbon\Carbon::now()->formatLocalized('%A %d %B %Y')}}</p>
                 <p>
                     L'application peut-être installée sur tous les téléphones Android disposant de la version Android
                     4.4 KitKat ou supérieur.

@@ -36,7 +36,7 @@
                                 <option value="confirmed">Confirmed</option>
                                 <option value="close">Close</option>
                             </select>
-                            <input type="submit" class="btn btn-primary pull-right"></input>
+                            <input type="submit" class="btn btn-primary pull-right"/>
                         </form>
                     </div>
                     <div class="clearfix"></div>
@@ -46,6 +46,11 @@
                 {{$bug->description}}
             </div>
             <div class="panel-footer">
+                <div class="pull-left">
+                    @if(Auth::user() && Auth::user()->id == $bug->user->id)
+                    <a href="{{route('bug.edit', $bug->id)}}" class="btn btn-xs btn-primary">Éditer</a>
+                    @endif
+                </div>
                 <div class="pull-right">
                     {{$bug->getDate()}} par <a
                             href="{!! route('user.show', $bug->user->id) !!}">{{$bug->user->name}}</a>

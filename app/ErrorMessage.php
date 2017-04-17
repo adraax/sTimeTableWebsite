@@ -7,4 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class ErrorMessage extends Model
 {
     public $timestamps = false;
+
+
 }
