@@ -101,13 +101,14 @@ UNLOCK TABLES;
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users`
   DISABLE KEYS */;
-INSERT INTO `users` VALUES (1, 'Oliver Merlin [Team Pluto]', 'merlin.olivier71@gmail.com',
-                            '$2y$10$22xycpP/gww3eNfFB0QbBup6lpU1uQzPZSJjNWfZy1uqd31UOxH/6', 1, 0,
-                            'LLUbVsINAI0V9wlAPIw8T9O6HfGoFUE669lTkcc0YrIr4pteIkQeCZHjciPK', '2017-03-24 13:01:24',
-                            '2017-03-24 13:01:24'), (2, 'Julien Cordeau [Team Pluto]', 'julien-cg@hotmail.fr',
-                                                     '$2y$10$DU4Zn2ZlG7zxi4lPj8Z1c.uutg5navDkGHmJyKUM.7R9XBYZNTFtC', 1,
-                                                     0, 'KJcL2UaGQEEdFQfGMYI5UN4MYF5UMRwZajAgMQGYYkhj3y9ifAL6mRlTK0jg',
-                                                     '2017-03-24 13:45:40', '2017-03-24 13:46:03'),
+INSERT INTO `users` (id, name, email, password, admin, notifyComment, remember_token, created_at, updated_at)
+VALUES (1, 'Oliver Merlin [Team Pluto]', 'merlin.olivier71@gmail.com',
+        '$2y$10$22xycpP/gww3eNfFB0QbBup6lpU1uQzPZSJjNWfZy1uqd31UOxH/6', 1, 0,
+        'LLUbVsINAI0V9wlAPIw8T9O6HfGoFUE669lTkcc0YrIr4pteIkQeCZHjciPK', '2017-03-24 13:01:24',
+        '2017-03-24 13:01:24'), (2, 'Julien Cordeau [Team Pluto]', 'julien-cg@hotmail.fr',
+                                 '$2y$10$DU4Zn2ZlG7zxi4lPj8Z1c.uutg5navDkGHmJyKUM.7R9XBYZNTFtC', 1,
+                                 0, 'KJcL2UaGQEEdFQfGMYI5UN4MYF5UMRwZajAgMQGYYkhj3y9ifAL6mRlTK0jg',
+                                 '2017-03-24 13:45:40', '2017-03-24 13:46:03'),
   (3, 'Thibault Nougues  [Team Pluto]', 'thibault.nougues@hotmail.fr',
    '$2y$10$8fnhtqIq4QKSUTusiuK2iOXTkJaJXCerZWQm7epiDQFHAIbDQZSgW', 1, 0,
    '6O83FnqtQkG4l8XldSzqDzYgYw9rDRjMfuupbpQ7G546eUqndJjEw0xkfQRX', '2017-03-26 16:10:13', '2017-03-26 17:24:23'),
