@@ -47,7 +47,7 @@
             </div>
             <div class="panel-footer">
                 <div class="pull-left">
-                    @if(Auth::user() && Auth::user()->id == $bug->user->id)
+                    @if(Auth::user() && (Auth::user()->id == $bug->user->id || Auth::user()->admin))
                     <a href="{{route('bug.edit', $bug->id)}}" class="btn btn-xs btn-primary">Éditer</a>
                     @endif
                 </div>

@@ -12,4 +12,5 @@ class CommentRepository extends ResourceRepository
         $this->model = $comment;
     }
 
+
 }

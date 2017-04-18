@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Comment;
 use App\Http\Requests\CommentCreateRequest;
 use App\Repositories\CommentRepository;
 use Carbon\Carbon;
@@ -16,7 +17,7 @@ class CommentController extends Controller
 
     public function __construct(CommentRepository $commentRepository)
     {
-        $this->commentRepository = $commentRepository;
+        //$this->commentRepository = $commentRepository;
         $this->middleware('auth');
         Carbon::setLocale(Config::get('app.locale'));
     }
@@ -49,7 +50,9 @@ class CommentController extends Controller
      */
     public function store(CommentCreateRequest $request)
     {
-        $comment = $this->commentRepository->store($request->all());
+        $comment = new Comment();
+        $comment->fill($request->all());
+        $comment->save();
 
         return redirect('bug/' . $request->input('bug_id'));
     }
@@ -73,7 +76,8 @@ class CommentController extends Controller
      */
     public function edit($id)
     {
-        $comment = $this->commentRepository->getById($id);
+        //$comment = $this->commentRepository->getById($id);
+        $comment = Comment::withTrashed()->find($id);
 
         return view('comment.edit', compact('comment'));
     }
@@ -87,7 +91,9 @@ class CommentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->commentRepository->update($id, $request->all());
+        $comment = Comment::withTrashed()->find($id);
+        $comment->fill($request->all());
+        $comment->save();
         return redirect('bug');
     }
 
@@ -99,6 +105,7 @@ class CommentController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Comment::withTrashed()->find($id)->delete();
+        return redirect()->back();
     }
 }

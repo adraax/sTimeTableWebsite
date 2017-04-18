@@ -1,11 +1,26 @@
 <div class="panel panel-default">
     <div class="panel-body">
-        {{$comment->content}}
+        @if($comment->trashed())
+            Ce commentaire a été supprimé.
+        @else
+            {{$comment->content}}
+        @endif
     </div>
     <div class="panel-footer">
         <div class="pull-left">
-            @if(Auth::user() && Auth::user()->id == $comment->user->id)
+            @if(Auth::user() && (Auth::user()->id == $comment->user->id || Auth::user()->admin) && !$comment->trashed())
                 <a href="{{route('comment.edit', $comment->id)}}" class="btn btn-xs btn-primary">Éditer</a>
+            @endif
+        </div>
+        <div class="pull-left">
+            @if(Auth::user() && (Auth::user()->id == $comment->user->id || Auth::user()->admin) && !$comment->trashed())
+                <form method="post" action="{!! route('comment.destroy', $comment->id) !!}">
+                    {{ csrf_field() }}
+                    {{ method_field('DELETE') }}
+                    <button class="btn btn-danger btn-block btn-xs">
+                        Supprimer
+                    </button>
+                </form>
             @endif
         </div>
         <div class="pull-right">

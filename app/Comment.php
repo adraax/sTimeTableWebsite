@@ -15,6 +15,10 @@ class Comment extends Model
         'bug_id', 'content', 'user_id',
     ];
 
+    protected $hidden = [
+        'deleted_at',
+    ];
+
     public function user()
     {
         return $this->belongsTo(User::class);
