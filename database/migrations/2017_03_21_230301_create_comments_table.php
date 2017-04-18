@@ -28,6 +28,7 @@ class CreateCommentsTable extends Migration
                 ->onDelete('restrict')
                 ->onUpdate('restrict');
             $table->text('content');
+            $table->date('deleted_at');
             $table->timestamps();
         });
     }

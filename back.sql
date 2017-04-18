@@ -30,7 +30,19 @@ UNLOCK TABLES;
 
 LOCK TABLES `comments` WRITE;
 /*!40000 ALTER TABLE `comments` DISABLE KEYS */;
-INSERT INTO `comments` VALUES (1,2,5,'acceptée*','2017-03-26 11:58:58','2017-03-26 11:58:58'),(2,2,6,'Peux-tu nous donner les informations que tu as rempli lors du premier démarrage de l\'appli ?\r\nDiplôme/Mention/Promo/Groupe de TD/Groupe de TP','2017-03-27 08:24:01','2017-03-27 08:24:01'),(3,2,6,'J\'ai trouvé le problème, nous ne savions pas qu\'il existait plusieurs groupes de CM, nous pensions qu\'il n\'y avait que \"CMA\", nous allons corrigé ça pour les prochaines versions.','2017-03-27 16:51:20','2017-03-27 16:51:20'),(4,1,8,'Bonjour.\r\nPour l\'instant les mises à jour n\'ont pas encore été publiées.\r\nLes prochaines versions seront disponibles sur ce site et vous serez informés par mail de leur sortie.','2017-04-03 14:47:27','2017-04-18 00:21:42'),(5,2,7,'Le problème survient lorsque deux cours identiques (Anglais dans la plupart des des cas) sont placés au même horaire. Nous allons modifier notre comparateur pour éviter le problème de notification.','2017-04-06 08:51:08','2017-04-06 08:51:08');
+INSERT INTO `comments` ('id', 'user_id', 'bug_id', 'content', 'created_at', 'updated_at')
+VALUES (1, 2, 5, 'acceptée*', '2017-03-26 11:58:58', '2017-03-26 11:58:58'), (2, 2, 6,
+                                                                              'Peux-tu nous donner les informations que tu as rempli lors du premier démarrage de l\'appli ?\r\nDiplôme/Mention/Promo/Groupe de TD/Groupe de TP',
+                                                                              '2017-03-27 08:24:01',
+                                                                              '2017-03-27 08:24:01'), (3, 2, 6,
+                                                                                                       'J\'ai trouvé le problème, nous ne savions pas qu\'il existait plusieurs groupes de CM, nous pensions qu\'il n\'y avait que \"CMA\", nous allons corrigé ça pour les prochaines versions.',
+                                                                                                       '2017-03-27 16:51:20',
+                                                                                                       '2017-03-27 16:51:20'),
+  (4, 1, 8,
+   'Bonjour.\r\nPour l\'instant les mises à jour n\'ont pas encore été publiées.\r\nLes prochaines versions seront disponibles sur ce site et vous serez informés par mail de leur sortie.',
+   '2017-04-03 14:47:27', '2017-04-18 00:21:42'), (5, 2, 7,
+                                                   'Le problème survient lorsque deux cours identiques (Anglais dans la plupart des des cas) sont placés au même horaire. Nous allons modifier notre comparateur pour éviter le problème de notification.',
+                                                   '2017-04-06 08:51:08', '2017-04-06 08:51:08');
 /*!40000 ALTER TABLE `comments` ENABLE KEYS */;
 UNLOCK TABLES;
 

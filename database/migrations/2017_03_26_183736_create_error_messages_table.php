@@ -15,7 +15,8 @@ class CreateErrorMessagesTable extends Migration
     {
         Schema::create('error_messages', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
+            $table->string('quote');
+            $table->string('author');
         });
     }
 
