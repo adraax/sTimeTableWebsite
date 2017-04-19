@@ -96,17 +96,22 @@
             </div>
         </nav>
 
-        <div class="container">
-            @yield('content')
+        <div class="test">
+            <div class="container">
+                @yield('content')
+            </div>
         </div>
 
 
         <footer class="blog-footer">
-            <p>Site de la TeamPluto pour l'application sTimeTable. Réalisé par <a
-                        href="{!! route('user.show', 1) !!}">Olivier Merlin</a></p>
-            <p>
-                <a href="#">Retourner en haut</a>
-            </p>
+            <div class="container">
+                <p>Site de la TeamPluto pour l'application sTimeTable. Réalisé par <a
+                            href="{!! route('user.show', 1) !!}">Olivier Merlin</a></p>
+                <p>
+                    <a href="#">Retourner en haut</a>
+                </p>
+            </div>
+
         </footer>
 
 
