@@ -43,7 +43,7 @@
                 @endif
             </div>
             <div class="panel-body">
-                {{$bug->description}}
+                {!! nl2br(e($bug->description)) !!}
             </div>
             <div class="panel-footer">
                 <div class="pull-left">

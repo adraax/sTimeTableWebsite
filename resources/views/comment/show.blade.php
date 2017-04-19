@@ -3,7 +3,7 @@
         @if($comment->trashed())
             Ce commentaire a été supprimé.
         @else
-            {{$comment->content}}
+            {!! nl2br(e($comment->content)) !!}
         @endif
     </div>
     <div class="panel-footer">
