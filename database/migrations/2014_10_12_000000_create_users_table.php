@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->boolean("admin")->default(false);
             $table->boolean("notifyBug")->default(true);
             $table->boolean('notifyComment')->default(false);
+            $this->boolean('receiveNews')->default(true);
             $table->rememberToken();
             $table->timestamps();
         });

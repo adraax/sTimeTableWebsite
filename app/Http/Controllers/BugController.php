@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Bug;
 use App\Http\Requests\BugCreateRequest;
 use App\Http\Requests\BugUpdateRequest;
+use App\Mail\BugCreated;
 use App\Repositories\BugRepository;
+use Illuminate\Support\Facades\Mail;
 
 class BugController extends Controller
 {
@@ -56,7 +58,15 @@ class BugController extends Controller
     public function store(BugCreateRequest $request)
     {
         $bug = $this->bugRepository->store($request->all());
-        return redirect('bug')->withOk("Le bug " . $bug->title . " a été créé.");
+        /*$users = User::where('admin', '1')->get();
+
+        foreach ($users as $user) {
+            Mail::to($user)->queue(new BugCreated($bug));
+        }*/
+
+        Mail::to($request->user())->queue(new BugCreated($bug));
+
+        return redirect('/bug')->withOk("Le bug " . $bug->title . " a été créé.");
     }
 
     /**

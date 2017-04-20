@@ -20,6 +20,11 @@ class Bug extends Model
         return $this->hasMany(Comment::class)->withTrashed();
     }
 
+    public function commentsNoTrash()
+    {
+        return $this->hasMany(Comment::class);
+    }
+
     public function getDate()
     {
         return $this->created_at->formatLocalized('%A %d %B %Y');
