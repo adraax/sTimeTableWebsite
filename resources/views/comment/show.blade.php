@@ -23,6 +23,17 @@
                 </form>
             @endif
         </div>
+        <div class="pull-left margin-5">
+            @if(Auth::user()->admin)
+                <form method="post" action="{!! route('comment.hardDelete', $comment->id) !!}">
+                    {{ csrf_field() }}
+                    {{ method_field('DELETE') }}
+                    <button class="btn btn-danger btn-block btn-xs">
+                        Supprimer Définitivement
+                    </button>
+                </form>
+            @endif
+        </div>
         <div class="pull-right">
             {{ucfirst($comment->getDiffDate())}} par <a
                     href="{!! route('user.show', $comment->user->id) !!}">{{$comment->user->name}}</a>

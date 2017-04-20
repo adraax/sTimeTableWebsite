@@ -108,4 +108,10 @@ class CommentController extends Controller
         Comment::withTrashed()->find($id)->delete();
         return redirect()->back();
     }
+
+    public function hardDestroy($id)
+    {
+        Comment::withTrashed()->find($id)->forceDelete();
+        return redirect()->back();
+    }
 }

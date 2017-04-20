@@ -32,6 +32,7 @@ Route::get('/wiki/timetable', function () {
 Route::resource('user', 'UserController');
 Route::resource('bug', 'BugController', ['except' => ['destroy']]);
 Route::resource('comment', 'CommentController', ['except' => ['index', 'create', 'show']]);
+Route::delete('/comment/{id}/hard', 'CommentController@hardDestroy')->name('comment.hardDelete');
 
 Route::get('/error', 'ErrorMessageController@index')->name('error');
 Route::get('/error/add', 'ErrorMessageController@add')->name('error.add');
