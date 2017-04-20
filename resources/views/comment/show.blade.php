@@ -7,12 +7,12 @@
         @endif
     </div>
     <div class="panel-footer">
-        <div class="pull-left">
+        <div class="pull-left margin-5">
             @if(Auth::user() && (Auth::user()->id == $comment->user->id || Auth::user()->admin) && !$comment->trashed())
                 <a href="{{route('comment.edit', $comment->id)}}" class="btn btn-xs btn-primary">Éditer</a>
             @endif
         </div>
-        <div class="pull-left">
+        <div class="pull-left margin-5">
             @if(Auth::user() && (Auth::user()->id == $comment->user->id || Auth::user()->admin) && !$comment->trashed())
                 <form method="post" action="{!! route('comment.destroy', $comment->id) !!}">
                     {{ csrf_field() }}

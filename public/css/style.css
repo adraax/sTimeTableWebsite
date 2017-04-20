@@ -11,6 +11,10 @@ html {
     height: 500px;
 }
 
+.margin-5 {
+    margin-right: 5px;
+}
+
 /** Blog Style **/
 /*
  * Globals
