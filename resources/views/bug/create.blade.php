@@ -15,7 +15,7 @@
                         <input type = "hidden" name = "user_id" id = "user_id" value = "{{auth()->user()->id}}">
                         <div class = "form-group {!! $errors->has('title') ? 'has-error' : '' !!}">
                             <input id = "title" name = "title" type = "text" class = "form-control"
-                                   placeholder = "Titre du bug" value = "{{old('title')}}" />
+                                   placeholder="Titre du bug" value="{{old('title')}}" autofocus/>
                             {!! $errors->first('title', '<small class="help-block">:message</small>') !!}
                         </div>
                         <div class = "{!! $errors->has('description') ? 'has-error' : '' !!}">

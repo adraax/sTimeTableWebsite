@@ -1,13 +1,21 @@
 @component('mail::message')
     # Nouveau Bug !
 
-    Un nouveau rapport de bug a été créé :
-    ## {{$bug->title}}
-    {{$bug->description}}
+    [{{$bug->user->name}}]({!! route('user.show', $bug->user->id) !!}) a créé un nouveau bug :
 
-    @component('mail::button', ['url' => route('bug.show', $bug->id)])
-        Aller voir.
+    @component('mail::panel')
+        ## {{$bug->title}}
+        {!! nl2br(e($bug->description)) !!}
     @endcomponent
 
+    <br>
+
+    @component('mail::button', ['url' => route('bug.show', $bug->id)])
+        Aller voir le bug.
+    @endcomponent
+
+
     Team Pluto
+    <br>
+    <small>Ceci est un mail automatique, merci de ne pas y répondre.</small>
 @endcomponent

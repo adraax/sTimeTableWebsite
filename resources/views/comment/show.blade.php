@@ -28,7 +28,8 @@
                 <form method="post" action="{!! route('comment.hardDelete', $comment->id) !!}">
                     {{ csrf_field() }}
                     {{ method_field('DELETE') }}
-                    <button class="btn btn-danger btn-block btn-xs">
+                    <button class="btn btn-danger btn-block btn-xs"
+                            onclick="return confirm('Vraiment supprimer cet utilisateur ?')">
                         Supprimer Définitivement
                     </button>
                 </form>

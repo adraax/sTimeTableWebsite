@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Bug;
 use App\Comment;
 use App\Http\Requests\CommentCreateRequest;
+use App\Mail\CommentCreated;
 use App\Repositories\CommentRepository;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Mail;
 
 class CommentController extends Controller
 {
@@ -53,6 +56,28 @@ class CommentController extends Controller
         $comment = new Comment();
         $comment->fill($request->all());
         $comment->save();
+
+        $bug = Bug::find($comment->bug->id);
+        $users = [];
+        $users[] = $bug->user;
+        $users[] = $request->user();
+
+        if ($request->user()->admin && ($request->user() != $comment->bug->user)) {
+            Mail::to($comment->bug->user)->queue(new CommentCreated($comment));
+        }
+
+        if ($bug->user->notifyBug) {
+            Mail::to($bug->user)->queue(new CommentCreated($comment));
+        }
+
+        foreach ($bug->commentsNoTrash as $com) {
+            if (!in_array($com->user, $users)) {
+                $users[] = $com->user;
+                if ($com->user->notifyComment) {
+                    Mail::to($com->user)->queue(new CommentCreated($comment));
+                }
+            }
+        }
 
         return redirect('bug/' . $request->input('bug_id'));
     }
