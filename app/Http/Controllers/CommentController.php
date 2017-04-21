@@ -64,7 +64,7 @@ class CommentController extends Controller
 
         if ($request->user()->admin && ($request->user() != $comment->bug->user)) {
             Mail::to($comment->bug->user)->queue(new CommentCreated($comment));
-        } elseif ($bug->user->notifyBug) {
+        } elseif ($bug->user->notifyBug && $bug->user != $request->user()) {
             Mail::to($bug->user)->queue(new CommentCreated($comment));
         }
 
