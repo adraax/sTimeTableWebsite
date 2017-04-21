@@ -64,10 +64,34 @@ class UserController extends Controller
     public function update(UserUpdateRequest $request, $id)
     {
         $this->setAdmin($request);
+        $this->setBug($request);
+        $this->setComment($request);
+        $this->setNews($request);
 
         $this->userRepository->update($id, $request->all());
 
         return redirect('user')->withOk("L'utilisateur " . $request->input('name') . " a été modifié.");
+    }
+
+    private function setBug($request)
+    {
+        if (!$request->has('notifyBug')) {
+            $request->merge(['notifyBug' => 0]);
+        }
+    }
+
+    private function setComment($request)
+    {
+        if (!$request->has('notifyComment')) {
+            $request->merge(['notifyComment' => 0]);
+        }
+    }
+
+    private function setNews($request)
+    {
+        if (!$request->has('receiveNews')) {
+            $request->merge(['receiveNews' => 0]);
+        }
     }
 
     public function destroy($id)
