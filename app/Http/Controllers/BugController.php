@@ -7,6 +7,7 @@ use App\Http\Requests\BugCreateRequest;
 use App\Http\Requests\BugUpdateRequest;
 use App\Mail\BugCreated;
 use App\Repositories\BugRepository;
+use App\User;
 use Illuminate\Support\Facades\Mail;
 
 class BugController extends Controller
