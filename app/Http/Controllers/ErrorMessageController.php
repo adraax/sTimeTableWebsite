@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class ErrorMessageController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('admin')->only('add', 'store');
+    }
+
     public function index()
     {
         $error = ErrorMessage::inRandomOrder()->first();
