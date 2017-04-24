@@ -3,12 +3,16 @@ html {
     min-height: 100%;
 }
 
+.list-nostyle{
+    list-style-type: none;
+}
+
 #gif-widget {
     height: 500px;
 }
 
 .wiki-image {
-    height: 500px;
+    height: 490px;
 }
 
 .margin-5 {

@@ -14,6 +14,12 @@
             <li><a href="{!! route('wiki.installation') !!}">Installation</a></li>
             <li><a href="{!! route('wiki.connection') !!}">Connexion</a></li>
             <li><a href="{!! route('wiki.timetable') !!}">Emploi du temps</a></li>
+            <li>
+                Menu
+                <ol class="list-nostyle">
+                    <li><a href="">Aujourd'hui</a></li>
+                </ol>
+            </li>
         </ol>
     </div>
 </div><!-- /.blog-sidebar -->

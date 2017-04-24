@@ -22,7 +22,7 @@ Route::get('/wiki/installation', function () {
 })->name('wiki.installation');
 
 Route::get('/wiki/connection', function () {
-    return view('construction');
+    return view('wiki.connection');
 })->name('wiki.connection');
 
 Route::get('/wiki/timetable', function () {
