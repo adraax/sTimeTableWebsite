@@ -31,13 +31,22 @@ class BugController extends Controller
      */
     public function index()
     {
-        $bugs = $this->bugRepository->getPaginate($this->nbrPerPage);
-        $links = $bugs->render();
+        $bugs = Bug::where('status', '<>', 'close')->paginate(10);
 
         $open = Bug::where('status', '<>', 'close')->count();
         $close = Bug::where('status', 'close')->count();
 
-        return view('bug.index', compact('bugs', 'links', 'open', 'close'));
+        return view('bug.index', compact('bugs', 'open', 'close'));
+    }
+
+    public function closed()
+    {
+        $bugs = Bug::where('status', '=', 'close')->paginate(10);
+
+        $open = Bug::where('status', '<>', 'close')->count();
+        $close = Bug::where('status', 'close')->count();
+
+        return view('bug.index', compact('bugs', 'open', 'close'));
     }
 
     /**

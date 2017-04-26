@@ -40,8 +40,9 @@
                     </td>
                 </tr>
             @empty
+                <tr><td>Aucun rapport de bug non résolu !</td></tr>
             @endforelse
         </table>
     </div>
-    {!! $links !!}
+    {!! $bugs->links() !!}
 @endsection

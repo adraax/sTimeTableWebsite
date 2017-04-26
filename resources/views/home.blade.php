@@ -51,6 +51,13 @@
                                 signification des couleurs</li>
                         </ul>
                     </li>
+                    <li>
+                        Corrections de bugs
+                        <ul>
+                            <li>Correction d'un problème de notification quand deux cours identiques avaient lieu
+                                en même temps</li>
+                        </ul>
+                    </li>
                 </ul>
                 <h3>v0.3</h3>
                 <ul>
