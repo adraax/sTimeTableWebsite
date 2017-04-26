@@ -14,7 +14,7 @@
         <link rel="mask-icon" href="{{URL::asset('safari-pinned-tab.svg')}}" color="#5bbad5">
         <meta name="theme-color" content="#ffffff">
 
-        <title>@yield('title') sTimeTable</title>
+        <title>@yield('title') Emploi du temps Paul Sabatier</title>
 
         <!-- Bootstrap core CSS -->
         <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet"
@@ -42,7 +42,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="{!! route('home') !!}"><span
-                                class="glyphicon glyphicon-calendar"></span> sTimeTable</a>
+                                class="glyphicon glyphicon-calendar"></span> Emploi du temps Paul Sabatier</a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
@@ -105,7 +105,7 @@
 
         <footer class="blog-footer">
             <div class="container">
-                <p>Site de la TeamPluto pour l'application sTimeTable. Réalisé par <a
+                <p>Site de la TeamPluto pour l'application Emploi du temps Paul Sabatier. Réalisé par <a
                             href="{!! route('user.show', 1) !!}">Olivier Merlin</a></p>
                 <p>
                     <a href="#">Retourner en haut</a>

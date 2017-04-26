@@ -4,7 +4,7 @@
 @endsection
 @section('content')
     <div class="blog-header">
-        <h1 class="blog-title">sTimeTable Wiki</h1>
+        <h1 class="blog-title">Emploi du temps Paul Sabatier</h1>
         <p class="lead blog-description">Application de gestion d'emploi du temps</p>
     </div>
 
@@ -24,13 +24,15 @@
                 <img src="{{URL::asset('images/connect (2).png')}}" alt="" class="wiki-image">
                 <p><br></p>
                 <h3>Autorisation</h3>
-                <p>Si votre téléphone dispose de la version 6.0 ou supérieure, vous devez accepter les autorisations
+                <p>Si votre téléphone dispose de la version d'Android 6.0 ou supérieure, vous devez accepter les
+                    autorisations
                     comme sur la fenêtre suivante.
                 </p>
                 <img src="{{URL::asset('images/permission.png')}}" alt="" class="wiki-image">
 
             </div><!-- /.blog-post -->
 
+            <a href="{!! route('wiki.installation') !!}" class="btn btn-primary pull-left">Précédent : installation</a>
             <a href="{!! route('wiki.timetable') !!}" class="btn btn-primary pull-right">Suivant : emploi du temps</a>
             <div><br><br></div>
         </div><!-- /.blog-main -->

@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'sTimeTable',
+    'name' => 'Emploi du temps Paul Sabatier',
 
     /*
     |--------------------------------------------------------------------------

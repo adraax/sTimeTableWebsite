@@ -26,7 +26,7 @@ Route::get('/wiki/connection', function () {
 })->name('wiki.connection');
 
 Route::get('/wiki/timetable', function () {
-    return view('construction');
+    return view('wiki.timetable');
 })->name('wiki.timetable');
 
 Route::resource('user', 'UserController');

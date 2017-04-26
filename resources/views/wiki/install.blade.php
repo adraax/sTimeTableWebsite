@@ -4,7 +4,7 @@
 @endsection
 @section('content')
     <div class="blog-header">
-        <h1 class="blog-title">sTimeTable Wiki</h1>
+        <h1 class="blog-title">Emploi du temps Paul Sabatier</h1>
         <p class="lead blog-description">Application de gestion d'emploi du temps</p>
     </div>
 

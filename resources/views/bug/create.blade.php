@@ -10,7 +10,7 @@
             <div class = "panel-heading">Rapport de bug</div>
             <div class = "panel-body">
                 <div class = "col-sm-12">
-                    <form action = "{{ route('bug.store') }}" method = "post" class = "form-horizontal panel">
+                    <form action = "{{ route('bug.store') }}" method = "post" class = "form-horizontal">
                         {{ csrf_field() }}
                         <input type = "hidden" name = "user_id" id = "user_id" value = "{{auth()->user()->id}}">
                         <div class = "form-group {!! $errors->has('title') ? 'has-error' : '' !!}">
@@ -18,11 +18,11 @@
                                    placeholder="Titre du bug" value="{{old('title')}}" autofocus/>
                             {!! $errors->first('title', '<small class="help-block">:message</small>') !!}
                         </div>
-                        <div class = "{!! $errors->has('description') ? 'has-error' : '' !!}">
-                            <textarea class="form-group" name="description" id="description" style="width: 100%;"
+                        <div class = "form-group {!! $errors->has('description') ? 'has-error' : '' !!}">
+                            <textarea class="form-control" name="description" id="description" style="width: 100%;"
                                       rows="10"
                                       placeholder="Description">{{old('description')}}</textarea>
-                            {!! $errors->first('body', '<small class="help-block">:message</small>') !!}
+                            {!! $errors->first('description', '<small class="help-block">:message</small>') !!}
                         </div>
                         <button type = "submit" class = "btn btn-primary pull-right">Envoyer</button>
                     </form>
