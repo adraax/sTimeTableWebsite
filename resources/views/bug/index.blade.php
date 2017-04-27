@@ -12,8 +12,13 @@
             commentaire.
         </div>
     @endif
-    <span class="glyphicon glyphicon-remove"></span> {{$open}} Ouverts &nbsp; <span
-            class="glyphicon glyphicon-ok"></span> {{$close}} résolus
+    <a href="{!! route('bug.index') !!}"><span class="glyphicon glyphicon-remove"></span> {{$open}} Ouverts</a>
+    &nbsp;
+    @if($close > 0)
+        <a href="{!! route('bug.closed') !!}"><span class="glyphicon glyphicon-ok"></span> {{$close}} résolus</a>
+    @else
+        <span class="glyphicon glyphicon-ok"></span> {{$close}} résolus
+    @endif
     @if(Auth::user())
         <a href="{!! route('bug.create') !!}" class="btn btn-default btn-xs pull-right">Créer un rapport de bug</a>
     @endif
@@ -40,7 +45,9 @@
                     </td>
                 </tr>
             @empty
-                <tr><td>Aucun rapport de bug non résolu !</td></tr>
+                <tr>
+                    <td>Aucun rapport de bug non résolu !</td>
+                </tr>
             @endforelse
         </table>
     </div>

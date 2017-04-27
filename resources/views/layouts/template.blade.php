@@ -7,11 +7,13 @@
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <meta name="description" content="">
         <meta name="author" content="">
-        <link rel="apple-touch-icon" sizes="180x180" href="{{URL::asset('apple-touch-icon.png')}}">
-        <link rel="icon" type="image/png" href="{{URL::asset('favicon-32x32.png')}}" sizes="32x32">
-        <link rel="icon" type="image/png" href="{{URL::asset('favicon-16x16.png')}}" sizes="16x16">
-        <link rel="manifest" href="{{URL::asset('manifest.json')}}">
-        <link rel="mask-icon" href="{{URL::asset('safari-pinned-tab.svg')}}" color="#5bbad5">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{URL::asset('/favicons/apple-touch-icon.png')}}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{URL::asset('/favicons/favicon-32x32.png')}}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{URL::asset('/favicons/favicon-16x16.png')}}">
+        <link rel="manifest" href="{{URL::asset('/favicons/manifest.json')}}">
+        <link rel="mask-icon" href="{{URL::asset('/favicons/safari-pinned-tab.svg')}}" color="#5bbad5">
+        <link rel="shortcut icon" href="{{URL::asset('/favicons/favicon.ico')}}">
+        <meta name="msapplication-config" content="{{URL::asset('/favicons/browserconfig.xml')}}">
         <meta name="theme-color" content="#ffffff">
 
         <title>@yield('title') Emploi du temps Paul Sabatier</title>
@@ -42,7 +44,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="{!! route('home') !!}"><span
-                                class="glyphicon glyphicon-calendar"></span> Emploi du temps Paul Sabatier</a>
+                                class="glyphicon glyphicon-calendar"></span> sTimeTable</a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
@@ -105,7 +107,7 @@
 
         <footer class="blog-footer">
             <div class="container">
-                <p>Site de la TeamPluto pour l'application Emploi du temps Paul Sabatier. Réalisé par <a
+                <p>Site de la TeamPluto pour l'application sTimeTable. Réalisé par <a
                             href="{!! route('user.show', 1) !!}">Olivier Merlin</a></p>
                 <p>
                     <a href="#">Retourner en haut</a>

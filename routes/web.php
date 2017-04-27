@@ -30,7 +30,7 @@ Route::get('/wiki/timetable', function () {
 })->name('wiki.timetable');
 
 Route::resource('user', 'UserController');
-Route::get('/bug/closed', 'BugController@closed');
+Route::get('/bug/closed', 'BugController@closed')->name('bug.closed');
 Route::resource('bug', 'BugController', ['except' => ['destroy']]);
 Route::resource('comment', 'CommentController', ['except' => ['index', 'create', 'show']]);
 Route::delete('/comment/{id}/hard', 'CommentController@hardDestroy')->name('comment.hardDelete');
