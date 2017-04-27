@@ -24,7 +24,7 @@
                 <h2 class="blog-post-title">L'application est disponible !</h2>
 
                 <p>
-                    En ce jour du 26 avril 2017, l'application voit enfin le jour sur le Google Play Store, alors qu'attentez-vous pour aller la télécharger ?
+                    En ce jour du 27 avril 2017, l'application voit enfin le jour sur le Google Play Store, alors qu'attentez-vous pour aller la télécharger ?
                     <br>
                     Merci aux 25 participants du test utilisateurs qui ont pris le temps de tester l'application et de nous faire part de leur avis !
                     Nous restons à votre écoute pour des améliorations ou des corrections à apporter.
