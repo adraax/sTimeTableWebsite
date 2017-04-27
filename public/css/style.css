@@ -3,8 +3,12 @@ html {
     min-height: 100%;
 }
 
-.list-nostyle{
+.list-nostyle {
     list-style-type: none;
+}
+
+.store-button {
+    width: 70%;
 }
 
 #gif-widget {
