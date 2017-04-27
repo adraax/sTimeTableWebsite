@@ -29,6 +29,10 @@ Route::get('/wiki/timetable', function () {
     return view('wiki.timetable');
 })->name('wiki.timetable');
 
+Route::get('/wiki/today', function () {
+    return view('wiki.today');
+})->name('wiki.today');
+
 Route::resource('user', 'UserController');
 Route::get('/bug/closed', 'BugController@closed')->name('bug.closed');
 Route::resource('bug', 'BugController', ['except' => ['destroy']]);

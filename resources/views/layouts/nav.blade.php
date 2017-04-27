@@ -17,7 +17,7 @@
             <li>
                 Menu
                 <ol class="list-nostyle">
-                    <li><a href="">Aujourd'hui</a></li>
+                    <li><a href="{!! route('wiki.today') !!}">Aujourd'hui</a></li>
                 </ol>
             </li>
         </ol>
