@@ -44,7 +44,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="{!! route('home') !!}"><span
-                                class="glyphicon glyphicon-calendar"></span> sTimeTable</a>
+                                class="glyphicon glyphicon-calendar"></span> Emploi du temps Paul Sabatier</a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
