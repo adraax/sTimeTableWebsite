@@ -13,67 +13,9 @@
             <div class="blog-post">
                 <h2 class="blog-post-title">Installation</h2>
                 <p class="blog-post-meta">Modifié pour la dernière fois
-                    le {{\Carbon\Carbon::createFromFormat('d-m-Y', '19-04-2017')->formatLocalized('%A %d %B %Y')}}</p>
+                    le {{\Carbon\Carbon::createFromFormat('d-m-Y', '28-04-2017')->formatLocalized('%A %d %B %Y')}}</p>
                 <p>
-                    L'application peut-être installée sur tous les téléphones Android disposant de la version Android
-                    4.4 KitKat ou supérieur.
-                    <br>
-                    Lors de l'installation sur une version < 6.0, vous devriez voir apparaitre la fenêtre suivante :
-                    <br>
-                </p>
-                <img src="{{URL::asset('images/autorisation.png')}}" alt="" class="wiki-image">
-                <br>
-                <p>
-                    <br>
-                    Sur une version 6.0 ou supérieur l'affichage sera similaire, les autorisations nécessaires aux
-                    fonctionnement
-                    de l'application ne seront pas affichées.
-                </p>
-                <h3>Autorisations</h3>
-                <p>
-                    Il existe deux types d'autorisation : les autorisations normales, et les autorisations
-                    "dangereuses".
-                    <br>
-                    Depuis Android 6.0, les autorisations dangereuses sont automatiquement refusées, et les
-                    autorisations normales acceptées.
-                    <br>
-                    Nous y reviendrons plus bas.
-                </p>
-                <ul>
-                    <li> Autorisations normales
-                        <ul>
-                            <li>
-                                Internet : l'application a besoin de savoir si votre téléphone est connecté à internet
-                                et de pouvoir y accéder pour télécharger l'emploi du temps Celcat
-                            </li>
-                            <li>
-                                Démarrage : cela permet de relancer l'import automatique de votre emploi du temps, si
-                                vous avez activé cette fonctionnalité.
-                            </li>
-                            <li>
-                                Vibration : cette autorisation permet à votre téléphone de vibrer lorsque votre emploi
-                                du temps est modifié.
-                            </li>
-                        </ul>
-                    </li>
-                    <li> Autorisation "dangereuse"
-                        <ul>
-                            <li>
-                                Stockage : pour pouvoir exporter votre emploi du temps au format PDF, l'application a
-                                besoin de pouvoir le stocker sur votre téléphone avant de l'envoyer.
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <p>
-                    <br>
-                    Si vous disposez d'une version d'android > 6.0, vous devez activer les autorisations manuellement.
-                    <br>
-                    Pour cela allez dans les paramètres de votre téléphone, menu applications.
-                    Cherchez l'application sTimeTable, cliquez dessus, puis cliquez sur Autorisations.
-                    <br>
-                    Vous n'avez plus qu'a accepter toutes les autorisations.
+                    Pour installer l'application, il suffit de la télécharger sur le Google Play Store.
                 </p>
             </div><!-- /.blog-post -->
 
