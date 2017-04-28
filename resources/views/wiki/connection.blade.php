@@ -20,8 +20,7 @@
                     <br>
                     Lorsque vous appuyez sur le bouton valider, votre emploi du temps sera téléchargé.
                 </p>
-                <img src="{{URL::asset('images/connect (1).png')}}" alt="" class="wiki-image">
-                <img src="{{URL::asset('images/connect (2).png')}}" alt="" class="wiki-image">
+                <img src="{{URL::asset('images/connect.png')}}" alt="" class="wiki-image">
                 <p><br></p>
                 <h3>Autorisation</h3>
                 <p>Si votre téléphone dispose de la version d'Android 6.0 ou supérieure, vous devez accepter les
