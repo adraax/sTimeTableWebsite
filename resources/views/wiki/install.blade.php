@@ -17,6 +17,14 @@
                 <p>
                     Pour installer l'application, il suffit de la télécharger sur le Google Play Store.
                 </p>
+
+                <h3>Permissions :</h3>
+                <ul>
+                    <li>INTERNET : L'application a besoin de savoir si votre téléphone est connecté à internet et de pouvoir y accéder pour télécharger l'emploi du temps Celcat</li>
+                    <li>DÉMARRAGE : Cela permet de relancer l'import automatique de votre emploi du temps, si vous avez activé cette fonctionnalité.</li>
+                    <li>VIBRATION : Cette autorisation permet à votre téléphone de vibrer lorsque votre emploi du temps est modifié.</li>
+                    <li>STOCKAGE : Pour pouvoir exporter votre emploi du temps au format PDF ou ICS, l'application a besoin de pouvoir le stocker sur votre téléphone avant de l'envoyer. Aussi, pour pouvoir importer au format ICS, l'application doit pouvoir accéder au fichier présent sur le téléphone.</li>
+                </ul>
             </div><!-- /.blog-post -->
 
             <a href="{!! route('wiki.connection') !!}" class="btn btn-primary pull-right">Suivant : connexion</a>
