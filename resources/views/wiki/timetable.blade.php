@@ -23,7 +23,7 @@
                 <p>
                     <br>
                     Le menu en haut à droite permet d'afficher une légende vous permettant de savoir à quel type de
-                    cours correspond chaue couleur.
+                    cours correspond chaque couleur.
                 </p>
                 <img src="{{URL::asset('images/legende (1).png')}}" alt="" class="wiki-image">
                 <img src="{{URL::asset('images/legende (2).png')}}" alt="" class="wiki-image">
@@ -41,8 +41,7 @@
             </div><!-- /.blog-post -->
 
             <a href="{!! route('wiki.connection') !!}" class="btn btn-primary pull-left">Précédent : connexion</a>
-            <!--<a href="{!! route('wiki.timetable') !!}" class="btn btn-primary pull-right">Suivant : emploi du
-                temps</a> -->
+            <a href="{!! route('wiki.event') !!}" class="btn btn-primary pull-right">Suivant : évènements</a>
             <div><br><br></div>
         </div><!-- /.blog-main -->
         @include('layouts.nav')

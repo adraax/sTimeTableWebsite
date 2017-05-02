@@ -107,7 +107,7 @@
 
         <footer class="blog-footer">
             <div class="container">
-                <p>Site de la TeamPluto pour l'application Emploi du temps Paul Sabatier. Réalisé par <a
+                <p>Site de la TeamPluto pour l'application <a href="{{env('APP_URL')}}">Emploi du temps Paul Sabatier</a>. Réalisé par <a
                             href="{!! route('user.show', 1) !!}">Olivier Merlin</a></p>
                 <p>
                     <a href="#">Retourner en haut</a>
