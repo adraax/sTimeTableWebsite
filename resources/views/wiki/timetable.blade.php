@@ -13,7 +13,7 @@
             <div class="blog-post">
                 <h2 class="blog-post-title">Emploi du temps</h2>
                 <p class="blog-post-meta">Modifié pour la dernière fois
-                    le {{\Carbon\Carbon::createFromFormat('d-m-Y', '25-04-2017')->formatLocalized('%A %d %B %Y')}}</p>
+                    le {{\Carbon\Carbon::createFromFormat('d-m-Y', '2-05-2017')->formatLocalized('%A %d %B %Y')}}</p>
                 <p>
                 <p>
                     Après vous être connecté, vous devriez arriver sur la fenêtre suivante :
@@ -22,9 +22,21 @@
                 <img src="{{URL::asset('images/emploi du temps.png')}}" alt="" class="wiki-image">
                 <p>
                     <br>
+                    Le menu en haut à droite permet d'afficher une légende vous permettant de savoir à quel type de
+                    cours correspond chaue couleur.
                 </p>
                 <img src="{{URL::asset('images/legende (1).png')}}" alt="" class="wiki-image">
                 <img src="{{URL::asset('images/legende (2).png')}}" alt="" class="wiki-image">
+
+                <p>
+                    <br>
+                    La petite mire en bas à droite de l'écran permet de revenir au jour actuel, si celui ci n'est
+                    plus visible à l'écran.
+                    <br>
+                    Elle disparait dès que le jour actuel réapparait à l'écran.
+                </p>
+
+                <img src="{{URL::asset('images/afterMire.png')}}" alt="" class="wiki-image">
 
             </div><!-- /.blog-post -->
 
