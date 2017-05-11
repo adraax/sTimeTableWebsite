@@ -30,8 +30,16 @@ Route::get('/wiki/timetable', function () {
 })->name('wiki.timetable');
 
 Route::get('/wiki/event', function () {
-    return view('wiki.event');
+    return view('wiki.event.index');
 })->name('wiki.event');
+
+Route::get('wiki/event/perso', function () {
+   return view('wiki.event.perso');
+})->name('wiki.event.perso');
+
+Route::get('wiki/event/celcat', function () {
+    return view('wiki.event.celcat');
+})->name('wiki.event.celcat');
 
 Route::get('/wiki/today', function () {
     return view('wiki.today');

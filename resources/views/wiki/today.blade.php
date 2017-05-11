@@ -23,8 +23,8 @@
 
             </div><!-- /.blog-post -->
 
-            <a href="{!! route('wiki.timetable') !!}" class="btn btn-primary pull-left">Précédent : emploi du
-                temps</a>
+            <a href="{!! route('wiki.event.celcat') !!}" class="btn btn-primary pull-left">Précédent : évènements
+                celcat</a>
         <!--<a href="{!! route('wiki.timetable') !!}" class="btn btn-primary pull-right">Suivant : emploi du
                 temps</a> -->
             <div><br><br></div>

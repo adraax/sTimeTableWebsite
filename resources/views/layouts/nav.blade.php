@@ -18,7 +18,13 @@
             <li><a href="{!! route('wiki.installation') !!}">Installation</a></li>
             <li><a href="{!! route('wiki.connection') !!}">Connexion</a></li>
             <li><a href="{!! route('wiki.timetable') !!}">Emploi du temps</a></li>
-            <li><a href="{!! route('wiki.event') !!}">Évenements</a></li>
+            <li>
+                <a href="{!! route('wiki.event') !!}">Évenements</a>
+                <ul class="list-nostyle">
+                    <li><a href="{!! route('wiki.event.perso') !!}">Évènements personnels</a></li>
+                    <li><a href="{!! route('wiki.event.celcat') !!}">Évènements celcat</a></li>
+                </ul>
+            </li>
             <li>
                 Menu
                 <ol class="list-nostyle">
