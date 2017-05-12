@@ -31,6 +31,13 @@
                     <br>
                     En cliquant sur le bouton notifier absence ou notifier retard, la fenêtre mes profs s'ouvre.
                 </p>
+                <img src="{{URL::asset('images/profs.png')}}" alt="" class="wiki-image">
+                <p>
+                    <br>
+                    En cliquant sur un des profs, votre application de gestion d'email favorite s'ouvre et un mail
+                    préformaté est prêt à l'envoi.
+                </p>
+                <img src="{{URL::asset('images/email.png')}}" alt="" class="wiki-image">
             </div><!-- /.blog-post -->
 
             <a href="{!! route('wiki.event.perso') !!}" class="btn btn-primary pull-left">Précédent : évènements
