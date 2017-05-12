@@ -13,10 +13,10 @@
             <div class="blog-post">
                 <h2 class="blog-post-title">Menu - Aujourd'hui</h2>
                 <p class="blog-post-meta">Modifié pour la dernière fois
-                    le {{\Carbon\Carbon::createFromFormat('d-m-Y', '27-04-2017')->formatLocalized('%A %d %B %Y')}}</p>
+                    le {{\Carbon\Carbon::createFromFormat('d-m-Y', '12-05-2017')->formatLocalized('%A %d %B %Y')}}</p>
                 <p>
                 <p>
-                    Après vous être connecté, vous devriez arriver sur la fenêtre suivante :
+                    Cette fenêtre vous permet de voir tous les cours du jour.
                 </p>
                 <img src="{{URL::asset('images/aujourd\'hui (1).png')}}" alt="" class="wiki-image">
                 <img src="{{URL::asset('images/aujourd\'hui (2).png')}}" alt="" class="wiki-image">

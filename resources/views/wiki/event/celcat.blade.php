@@ -13,7 +13,7 @@
             <div class="blog-post">
                 <h2 class="blog-post-title">Évènements celcat</h2>
                 <p class="blog-post-meta">Modifié pour la dernière fois
-                    le {{\Carbon\Carbon::createFromFormat('d-m-Y', '11-05-2017')->formatLocalized('%A %d %B %Y')}}</p>
+                    le {{\Carbon\Carbon::createFromFormat('d-m-Y', '12-05-2017')->formatLocalized('%A %d %B %Y')}}</p>
                 <p>
                 <p>
                     Après avoir appuyé sur un évènement celcat de votre emploi du temps, vous devriez voir apparaitre
