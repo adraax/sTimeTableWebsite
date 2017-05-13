@@ -29,6 +29,13 @@
                 <a href="{!! route('wiki.menu') !!}">Menu</a>
                 <ol class="list-nostyle">
                     <li><a href="{!! route('wiki.menu.today') !!}">Aujourd'hui</a></li>
+                    <li><a href="{!! route('wiki.menu.daysview') !!}">Vue 1/3/7 jours</a></li>
+                    <li><a href="{!! route('wiki.menu.today') !!}">Vue Examens</a></li>
+                    <li><a href="{!! route('wiki.menu.today') !!}">Synchroniser</a></li>
+                    <li><a href="{!! route('wiki.menu.today') !!}">Export PDF</a></li>
+                    <li><a href="{!! route('wiki.menu.today') !!}">Import/Export PDF</a></li>
+                    <li><a href="{!! route('wiki.menu.today') !!}">Mes enseignants</a></li>
+                    <li><a href="{!! route('wiki.menu.today') !!}">Préférences</a></li>
                 </ol>
             </li>
         </ol>

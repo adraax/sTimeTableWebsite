@@ -11,19 +11,23 @@
     <div class="row">
         <div class="col-sm-8 blog-main">
             <div class="blog-post">
-                <h2 class="blog-post-title">Menu - Aujourd'hui</h2>
+                <h2 class="blog-post-title">Menu - Vue 1/3/7 jours</h2>
                 <p class="blog-post-meta">Modifié pour la dernière fois
-                    le {{\Carbon\Carbon::createFromFormat('d-m-Y', '12-05-2017')->formatLocalized('%A %d %B %Y')}}</p>
+                    le {{\Carbon\Carbon::createFromFormat('d-m-Y', '13-05-2017')->formatLocalized('%A %d %B %Y')}}</p>
                 <p>
                 <p>
-                    Cette fenêtre vous permet de voir tous les cours du jour.
+                    Les boutons "vue jour", "vue 3 jours" et "vue semaine" vous permettent de choisir le nombre de jours
+                    affiché sur
+                    l'écran
+                    principal.
                 </p>
-                <img src="{{URL::asset('images/aujourd\'hui (1).png')}}" alt="" class="wiki-image">
-                <img src="{{URL::asset('images/aujourd\'hui (2).png')}}" alt="" class="wiki-image">
+                <img src="{{URL::asset('images/1day.png')}}" alt="" class="wiki-image">
+                <img src="{{URL::asset('images/3days.png')}}" alt="" class="wiki-image">
+                <img src="{{URL::asset('images/7days.png')}}" alt="" class="wiki-image">
 
             </div><!-- /.blog-post -->
 
-            <a href="{!! route('wiki.menu') !!}" class="btn btn-primary pull-left">Précédent : menu</a>
+            <a href="{!! route('wiki.menu.today') !!}" class="btn btn-primary pull-left">Précédent : Aujourd'hui</a>
             <a href="{!! route('wiki.menu.daysview') !!}" class="btn btn-primary pull-right">Suivant : Vue 1/3/7
                 jours</a>
             <div><br><br></div>
