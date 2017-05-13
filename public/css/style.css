@@ -19,6 +19,10 @@ html {
     height: 470px;
 }
 
+.wiki-horizontal {
+    width: 150px;
+}
+
 .margin-5 {
     margin-right: 5px;
 }

@@ -61,6 +61,11 @@ Route::get('/wiki/menu/synchro', function () {
     return view('wiki.menu.synchro');
 })->name('wiki.menu.synchro');
 
+Route::get('/wiki/menu/pdf', function () {
+    return view('wiki.menu.pdf');
+})->name('wiki.menu.pdf');
+
+
 Route::resource('user', 'UserController');
 Route::get('/bug/closed', 'BugController@closed')->name('bug.closed');
 Route::resource('bug', 'BugController', ['except' => ['destroy']]);

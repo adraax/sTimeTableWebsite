@@ -42,7 +42,7 @@
 
             <a href="{!! route('wiki.event.perso') !!}" class="btn btn-primary pull-left">Précédent : évènements
                 personnels</a>
-            <a href="{!! route('wiki.today') !!}" class="btn btn-primary pull-right">Suivant : menu</a>
+            <a href="{!! route('wiki.menu') !!}" class="btn btn-primary pull-right">Suivant : menu</a>
             <div><br><br></div>
         </div><!-- /.blog-main -->
         @include('layouts.nav')
