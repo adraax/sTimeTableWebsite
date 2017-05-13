@@ -13,8 +13,8 @@
             <div class="blog-post">
                 <h2 class="blog-post-title">Évènements personnels</h2>
                 <p class="blog-post-meta">Modifié pour la dernière fois
-                    le {{\Carbon\Carbon::createFromFormat('d-m-Y', '12-05-2017')->formatLocalized('%A %d %B %Y')}}</p>
-                <p>
+                    le {{\Carbon\Carbon::createFromFormat('d-m-Y', '12-05-2017')->formatLocalized('%A %d %B %Y')}}
+                </p>
                 <p>
                     En appuyant sur une case vide, vous pouvez créer un évènement personnalisé. Vous pouvez choisir
                     son nom, son heure de début, son heure de fin, sa localisation ainsi que sa couleur.
@@ -27,6 +27,11 @@
                     En appuyant sur un évènement personalisé, vous avez la possibilité d'afficher ses détails, de le
                     modifier ou de le supprimer.
                 </p>
+                <img src="{{URL::asset('images/eventPerso.png')}}" alt="" class="wiki-image">
+                <br>
+                <img src="{{URL::asset('images/affEventPerso.png')}}" alt="" class="wiki-image">
+                <img src="{{URL::asset('images/editEventPerso.png')}}" alt="" class="wiki-image">
+
             </div><!-- /.blog-post -->
 
             <a href="{!! route('wiki.event') !!}" class="btn btn-primary pull-left">Précédent : évènements</a>

@@ -41,9 +41,19 @@ Route::get('wiki/event/celcat', function () {
     return view('wiki.event.celcat');
 })->name('wiki.event.celcat');
 
-Route::get('/wiki/today', function () {
-    return view('wiki.today');
-})->name('wiki.today');
+Route::get('wiki/menu', function () {
+    return view('wiki.menu.index');
+})->name('wiki.menu');
+
+Route::get('/wiki/menu/today', function () {
+    return view('wiki.menu.today');
+})->name('wiki.menu.today');
+
+Route::get('/wiki/menu/daysview', function () {
+    return view('wiki.menu.daysview');
+})->name('wiki.menu.daysview');
+
+
 
 Route::resource('user', 'UserController');
 Route::get('/bug/closed', 'BugController@closed')->name('bug.closed');

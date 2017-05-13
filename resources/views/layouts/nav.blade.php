@@ -26,9 +26,9 @@
                 </ul>
             </li>
             <li>
-                Menu
+                <a href="{!! route('wiki.menu') !!}">Menu</a>
                 <ol class="list-nostyle">
-                    <li><a href="{!! route('wiki.today') !!}">Aujourd'hui</a></li>
+                    <li><a href="{!! route('wiki.menu.today') !!}">Aujourd'hui</a></li>
                 </ol>
             </li>
         </ol>
