@@ -25,7 +25,7 @@
                     <li><a href="{!! route('wiki.menu.exam') !!}">Vue Examens</a></li>
                     <li><a href="{!! route('wiki.menu.synchro') !!}">Synchroniser</a></li>
                     <li><a href="{!! route('wiki.menu.pdf') !!}">Export PDF</a></li>
-                    <li><a href="{!! route('wiki.menu.today') !!}">Import/Export PDF</a></li>
+                    <li><a href="{!! route('wiki.menu.today') !!}">Import/Export ICS</a></li>
                     <li><a href="{!! route('wiki.menu.today') !!}">Mes enseignants</a></li>
                     <li><a href="{!! route('wiki.menu.today') !!}">Préférences</a></li>
                 </ul>
