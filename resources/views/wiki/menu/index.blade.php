@@ -22,8 +22,8 @@
                 <ul>
                     <li><a href="{!! route('wiki.menu.today') !!}">Aujourd'hui</a></li>
                     <li><a href="{!! route('wiki.menu.daysview') !!}">Vue 1/3/7 jours</a></li>
-                    <li><a href="{!! route('wiki.menu.today') !!}">Vue Examens</a></li>
-                    <li><a href="{!! route('wiki.menu.today') !!}">Synchroniser</a></li>
+                    <li><a href="{!! route('wiki.menu.exam') !!}">Vue Examens</a></li>
+                    <li><a href="{!! route('wiki.menu.synchro') !!}">Synchroniser</a></li>
                     <li><a href="{!! route('wiki.menu.today') !!}">Export PDF</a></li>
                     <li><a href="{!! route('wiki.menu.today') !!}">Import/Export PDF</a></li>
                     <li><a href="{!! route('wiki.menu.today') !!}">Mes enseignants</a></li>

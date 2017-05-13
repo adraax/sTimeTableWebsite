@@ -53,7 +53,13 @@ Route::get('/wiki/menu/daysview', function () {
     return view('wiki.menu.daysview');
 })->name('wiki.menu.daysview');
 
+Route::get('/wiki/menu/exam', function () {
+    return view('wiki.menu.exam');
+})->name('wiki.menu.exam');
 
+Route::get('/wiki/menu/synchro', function () {
+    return view('wiki.menu.synchro');
+})->name('wiki.menu.synchro');
 
 Route::resource('user', 'UserController');
 Route::get('/bug/closed', 'BugController@closed')->name('bug.closed');
