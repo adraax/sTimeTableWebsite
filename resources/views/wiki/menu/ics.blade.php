@@ -11,24 +11,23 @@
     <div class="row">
         <div class="col-sm-8 blog-main">
             <div class="blog-post">
-                <h2 class="blog-post-title">Menu - Export PDF</h2>
+                <h2 class="blog-post-title">Menu - Import/Export ICS</h2>
                 <p class="blog-post-meta">Modifié pour la dernière fois
-                    le {{\Carbon\Carbon::createFromFormat('d-m-Y', '13-05-2017')->formatLocalized('%A %d %B %Y')}}</p>
+                    le {{\Carbon\Carbon::createFromFormat('d-m-Y', '15-05-2017')->formatLocalized('%A %d %B %Y')}}</p>
                 <p>
                 <p>
-                    Ce bouton vous permet d'exporter votre emploi du temps au format PDF.
+                    Ce bouton vous permet d'exporter votre emploi du temps au format ICS, ou bien d'importer les
+                    évènements d'un fichier .ics.
                     <br>
-                    Appuyez sur les boutons + et - pour régler le nombre de jour, puis sur valider afin de lancer
-                    l'export.
-                    <br>
-                    L'application vous demandera alors de choisir une application afin de partager le PDF.
+                    Différentes options sont disponobles, comme le choix des évènements à exporter, la prise en
+                    compte des évènements passés et la couleur des évènements à importer.
                 </p>
 
-                <img src="{{URL::asset('images/export.png')}}" alt="" class="wiki-horizontal">
+                <img src="{{URL::asset('images/ics.png')}}" alt="" class="wiki-image">
 
             </div><!-- /.blog-post -->
 
-            <a href="{!! route('wiki.menu.synchro') !!}" class="btn btn-primary pull-left">Précédent : Synchroniser</a>
+            <a href="{!! route('wiki.menu.pdf') !!}" class="btn btn-primary pull-left">Précédent : Export PDF</a>
             <a href="{!! route('wiki.menu.ics') !!}" class="btn btn-primary pull-right">Suivant : Import/export ICS</a>
             <div><br><br></div>
         </div><!-- /.blog-main -->
