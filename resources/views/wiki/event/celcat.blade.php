@@ -29,7 +29,7 @@
                 <img src="{{URL::asset('images/itineraire.gif')}}" alt="" class="wiki-image">
                 <p>
                     <br>
-                    En cliquant sur le bouton notifier absence ou notifier retard, la fenêtre mes profs s'ouvre.
+                    En cliquant sur le bouton notifier absence ou notifier retard, la fenêtre des enseignants s'ouvre.
                 </p>
                 <img src="{{URL::asset('images/profs.png')}}" alt="" class="wiki-image">
                 <p>

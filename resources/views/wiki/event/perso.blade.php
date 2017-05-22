@@ -24,7 +24,7 @@
 
                 <p>
                     <br>
-                    En appuyant sur un évènement personalisé, vous avez la possibilité d'afficher ses détails, de le
+                    En appuyant sur un évènement personnalisé, vous avez la possibilité d'afficher ses détails, de le
                     modifier ou de le supprimer.
                 </p>
                 <img src="{{URL::asset('images/eventPerso.png')}}" alt="" class="wiki-image">

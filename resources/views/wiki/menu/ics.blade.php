@@ -19,7 +19,7 @@
                     Ce bouton vous permet d'exporter votre emploi du temps au format ICS, ou bien d'importer les
                     évènements d'un fichier .ics.
                     <br>
-                    Différentes options sont disponobles, comme le choix des évènements à exporter, la prise en
+                    Différentes options sont disponibles, comme le choix des évènements à exporter, la prise en
                     compte des évènements passés et la couleur des évènements à importer.
                 </p>
 
