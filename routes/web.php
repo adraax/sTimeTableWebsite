@@ -65,9 +65,9 @@ Route::get('/wiki/menu/pdf', function () {
     return view('wiki.menu.pdf');
 })->name('wiki.menu.pdf');
 
-Route::get('/wiki/menu/ics', function () {
-    return view('wiki.menu.ics');
-})->name('wiki.menu.ics');
+Route::get('/wiki/menu/ics)', function () {
+    return view('wiki.menu.ics)');
+})->name('wiki.menu.ics)');
 
 
 Route::resource('user', 'UserController');
@@ -81,12 +81,3 @@ Route::get('/error/add', 'ErrorMessageController@add')->name('error.add');
 Route::post('/error', 'ErrorMessageController@store')->name('error.save');
 
 Auth::routes();
-
-Route::get('/sparkpost', function () {
-    Mail::send('emails.test', [], function ($message) {
-        $message
-            ->from('team-pluto@mail.adraax.eu', 'Team Pluto')
-            ->to('merlin.olivier71@gmail.com', 'Adraax')
-            ->subject('From SparkPost with ❤');
-    });
-});
