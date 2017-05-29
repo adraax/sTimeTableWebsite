@@ -24,9 +24,11 @@
                 <h2 class="blog-post-title">L'application est disponible !</h2>
 
                 <p>
-                    En ce jour du 27 avril 2017, l'application voit enfin le jour sur le Google Play Store, alors qu'attentez-vous pour aller la télécharger ?
+                    En ce jour du 27 avril 2017, l'application voit enfin le jour sur le Google Play Store, alors
+                    qu'attentez-vous pour aller la télécharger ?
                     <br>
-                    Merci aux 25 participants du test utilisateurs qui ont pris le temps de tester l'application et de nous faire part de leur avis !
+                    Merci aux 25 participants du test utilisateurs qui ont pris le temps de tester l'application et de
+                    nous faire part de leur avis !
                     Nous restons à votre écoute pour des améliorations ou des corrections à apporter.
                 </p>
                 <p class="blog-post-meta">
@@ -43,19 +45,23 @@
                         <ul>
                             <li>Renommage du bouton importer (menu) en synchroniser afin d'expliciter sa fonction</li>
                             <li>Changement de la fonction du bouton aujourd'hui (menu) afin de correspondre au
-                                résultat attendu</li>
+                                résultat attendu
+                            </li>
                             <li>Ajout d'une boite de dialogue pour la validation des autorisations (Android 6.0 et
-                                supérieur)</li>
+                                supérieur)
+                            </li>
                             <li>Modification du fond de la page de connexion afin de rendre le texte plus lisible</li>
                             <li>Ajout d'une légende sur la page d'emploi du temps afin d'expliciter la
-                                signification des couleurs</li>
+                                signification des couleurs
+                            </li>
                         </ul>
                     </li>
                     <li>
                         Corrections de bugs
                         <ul>
                             <li>Correction d'un problème de notification quand deux cours identiques avaient lieu
-                                en même temps</li>
+                                en même temps
+                            </li>
                         </ul>
                     </li>
                 </ul>
