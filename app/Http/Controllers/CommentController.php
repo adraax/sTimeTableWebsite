@@ -20,7 +20,6 @@ class CommentController extends Controller
 
     public function __construct(CommentRepository $commentRepository)
     {
-        //$this->commentRepository = $commentRepository;
         $this->middleware('auth');
         Carbon::setLocale(Config::get('app.locale'));
     }
@@ -99,7 +98,6 @@ class CommentController extends Controller
      */
     public function edit($id)
     {
-        //$comment = $this->commentRepository->getById($id);
         $comment = Comment::withTrashed()->find($id);
 
         return view('comment.edit', compact('comment'));

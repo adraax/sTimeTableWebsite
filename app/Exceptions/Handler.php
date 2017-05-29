@@ -45,7 +45,6 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
-        //return response()->view('errors.500', [], 500);
         if ($exception instanceof NotFoundHttpException) {
             return redirect('error');
         }

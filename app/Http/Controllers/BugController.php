@@ -19,9 +19,6 @@ class BugController extends Controller
     {
         $this->bugRepository = $bugRepository;
         $this->middleware('auth')->except(['index', 'show']);
-        /*setlocale(LC_TIME, 'French');
-        Carbon::setLocale(Config::get('app.locale'));
-        Carbon::setToStringFormat('d/m/Y à H:i:s');*/
     }
 
     /**
