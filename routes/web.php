@@ -65,9 +65,21 @@ Route::get('/wiki/menu/pdf', function () {
     return view('wiki.menu.pdf');
 })->name('wiki.menu.pdf');
 
-Route::get('/wiki/menu/ics)', function () {
-    return view('wiki.menu.ics)');
-})->name('wiki.menu.ics)');
+Route::get('/wiki/menu/ics', function () {
+    return view('wiki.menu.ics');
+})->name('wiki.menu.ics');
+
+Route::get('/wiki/menu/teachers', function () {
+    return view('wiki.menu.teachers');
+})->name('wiki.menu.teachers');
+
+Route::get('/wiki/menu/settings', function () {
+    return view('wiki.menu.settings.index');
+})->name('wiki.menu.settings');
+
+Route::get('/wiki/menu/settings/general', function () {
+    return view('wiki.menu.settings.general');
+})->name('wiki.menu.settings.general');
 
 
 Route::resource('user', 'UserController');

@@ -34,8 +34,15 @@
                     <li><a href="{!! route('wiki.menu.synchro') !!}">Synchroniser</a></li>
                     <li><a href="{!! route('wiki.menu.pdf') !!}">Export PDF</a></li>
                     <li><a href="{!! route('wiki.menu.ics') !!}">Import/Export ICS</a></li>
-                    <li><a href="#">Mes enseignants</a></li>
-                    <li><a href="#">Préférences</a></li>
+                    <li><a href="{!! route('wiki.menu.teachers') !!}">Mes enseignants</a></li>
+                    <li>
+                        <a href="{!! route('wiki.menu.settings') !!}">Préférences</a>
+                        <ol class="list-nostyle">
+                            <li><a href="{!! route('wiki.menu.settings.general') !!}">Général</a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                        </ol>
+                    </li>
                 </ol>
             </li>
         </ol>
