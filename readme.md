@@ -1,3 +1,5 @@
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/21a56de3-840a-431a-bfbf-61769672953e/big.png)](https://insight.sensiolabs.com/projects/21a56de3-840a-431a-bfbf-61769672953e)
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
