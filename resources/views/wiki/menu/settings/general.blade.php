@@ -21,6 +21,25 @@
                 </p>
 
                 <img src="{{URL::asset('images/general.png')}}" alt="" class="wiki-image">
+                <img src="{{URL::asset('images/generalEditName.png')}}" alt="" class="wiki-image">
+
+                <p>
+                    <br>
+                    Si vous appuyez sur "Modifier les couleurs par défaut", vous devriez voir les vues suivantes :
+                </p>
+
+                <img src="{{URL::asset('images/generalChangeColors.png')}}" alt="" class="wiki-image">
+                <img src="{{URL::asset('images/generalColorPicker.png')}}" alt="" class="wiki-image">
+
+                <p>
+                    <br>
+                    Si vous choisissez l'option "Changer de groupe" ou "Ajouter un second groupe", vous arriverez sur
+                    la page de <a href="{{route('wiki.connection')}}">connexion</a>.
+                    <br><br>
+                    Une fois que vous avez ajouté un second groupe, vous pouvez le supprimer.
+                </p>
+
+                <img src="{{URL::asset('images/generalDeleteSecondGroup.png')}}" alt="" class="wiki-image">
 
             </div><!-- /.blog-post -->
 

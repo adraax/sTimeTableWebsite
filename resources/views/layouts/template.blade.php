@@ -107,7 +107,7 @@
 
         <footer class="blog-footer">
             <div class="container">
-                <a href="https://insight.sensiolabs.com/what-we-analyse">
+                <a href="https://insight.sensiolabs.com/what-we-analyse" target="_blank">
                     <img src="https://insight.sensiolabs.com/projects/21a56de3-840a-431a-bfbf-61769672953e/big.png"
                          alt="">
                 </a>
