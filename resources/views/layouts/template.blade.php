@@ -107,13 +107,14 @@
 
         <footer class="blog-footer">
             <div class="container">
-                <p>Site de la TeamPluto pour l'application <a
-                            href="https://play.google.com/store/apps/details?id=fr.master_developpement_logiciel.teampluto.stimetable">Emploi
-                        du temps Paul Sabatier</a>. Réalisé par <a
-                            href="{!! route('user.show', 1) !!}">Olivier Merlin</a></p>
                 <img src="https://insight.sensiolabs.com/projects/21a56de3-840a-431a-bfbf-61769672953e/big.png" alt="">
                 <p>
                     <br>
+                    Site de la TeamPluto pour l'application <a
+                            href="https://play.google.com/store/apps/details?id=fr.master_developpement_logiciel.teampluto.stimetable">Emploi
+                        du temps Paul Sabatier</a>. Réalisé par <a
+                            href="{!! route('user.show', 1) !!}">Olivier Merlin</a></p>
+                <p>
                     <a href="#">Retourner en haut</a>
                 </p>
             </div>
