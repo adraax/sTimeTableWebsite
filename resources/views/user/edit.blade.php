@@ -57,6 +57,8 @@
                                     Recevoir des mails quand quelqu'un commente un bug que j'ai commenté
                                 </label>
                             </div>
+                        </div>
+                        <div class="form-group">
                             <div class="checkbox">
                                 <label>
                                     <input type="checkbox" name="receiveNews" id="receiveNews" value="1"
