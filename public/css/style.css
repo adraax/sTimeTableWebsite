@@ -35,7 +35,7 @@ html {
 
 body {
     color: #555;
-    margin-bottom: 135px;
+    margin-bottom: 180px;
 }
 
 .little {
@@ -202,7 +202,7 @@ h6, .h6 {
  */
 
 .blog-footer {
-    padding: 40px 0;
+    padding: 30px 0;
     color: #999;
     text-align: center;
     background-color: #f9f9f9;
@@ -212,7 +212,7 @@ h6, .h6 {
     bottom: 0;
     width: 100%;
     /* Set the fixed height of the footer here */
-    height: 135px;
+    height: 180px;
 }
 
 .blog-footer p:last-child {

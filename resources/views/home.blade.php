@@ -20,6 +20,16 @@
     <div class="row">
         <div class="col-sm-8 blog-main">
 
+            À venir - Août 2017 !
+            De nouvelles fonctionnalités verront le jour avant la rentrée, découvrez ici les grandes lignes :
+            - Amélioration de la page "Mes enseignants" -> Envoi de mail groupé ou personnel.
+            - Ajout d'un deuxième parcours (pour les doubles licences par exemple)
+            - Possibilité d'ajouter un lien vers un calendrier ICS pour le synchroniser automatiquement (7 liens maximum)
+            - Permettre la rotation de l'écran pour une vue paysage de l'application avec des affichages adaptés
+            - Possibilité d'ajouter des évènement qui dure "Toute la journée"
+
+            Le wiki sera mis à jour dans la foulée pour vous aidez à y voir plus clair.
+
             <div class="blog-post">
                 <h2 class="blog-post-title">L'application est disponible !</h2>
 
