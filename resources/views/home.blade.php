@@ -28,15 +28,26 @@
                 </p>
                 <ul>
                     <li>Amélioration de la page "Mes enseignants" -> Envoi de mail groupé ou personnel.</li>
+                    <li>Ajout d'un deuxième parcours (pour les doubles licences par exemple)</li>
+                    <li>
+                        Possibilité d'ajouter un lien vers un calendrier ICS pour le synchroniser automatiquement (7
+                        liens maximum)
+                    </li>
+                    <li>
+                        Permettre la rotation de l'écran pour une vue paysage de l'application avec des affichages
+                        adaptés
+                    </li>
+                    <li>Possibilité d'ajouter des évènement qui dure "Toute la journée"</li>
                 </ul>
-            </div>
-            - Ajout d'un deuxième parcours (pour les doubles licences par exemple)
-            - Possibilité d'ajouter un lien vers un calendrier ICS pour le synchroniser automatiquement (7 liens
-            maximum)
-            - Permettre la rotation de l'écran pour une vue paysage de l'application avec des affichages adaptés
-            - Possibilité d'ajouter des évènement qui dure "Toute la journée"
 
-            Le wiki sera mis à jour dans la foulée pour vous aidez à y voir plus clair.
+                <p>
+                    Le wiki sera mis à jour dans la foulée pour vous aidez à y voir plus clair.
+                </p>
+                
+                <p class="blog-post-meta">
+                    La Team Pluto
+                </p>
+            </div>
 
             <div class="blog-post">
                 <h2 class="blog-post-title">L'application est disponible !</h2>

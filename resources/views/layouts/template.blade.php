@@ -107,7 +107,10 @@
 
         <footer class="blog-footer">
             <div class="container">
-                <img src="https://insight.sensiolabs.com/projects/21a56de3-840a-431a-bfbf-61769672953e/big.png" alt="">
+                <a href="https://insight.sensiolabs.com/what-we-analyse">
+                    <img src="https://insight.sensiolabs.com/projects/21a56de3-840a-431a-bfbf-61769672953e/big.png"
+                         alt="">
+                </a>
                 <p>
                     <br>
                     Site de la TeamPluto pour l'application <a
