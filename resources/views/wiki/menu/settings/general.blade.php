@@ -44,7 +44,7 @@
             </div><!-- /.blog-post -->
 
             <a href="{!! route('wiki.menu.settings') !!}" class="btn btn-primary pull-left">Précédent : Préférences</a>
-            <a href="{!! route('wiki.menu.settings') !!}" class="btn btn-primary pull-right">Suivant : Préférences</a>
+            <a href="{!! route('wiki.menu.settings.notification') !!}" class="btn btn-primary pull-right">Suivant : Notifications</a>
             <div><br><br></div>
         </div><!-- /.blog-main -->
         @include('layouts.nav')

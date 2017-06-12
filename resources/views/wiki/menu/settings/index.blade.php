@@ -21,8 +21,8 @@
                 </p>
                 <ul>
                     <li><a href="{!! route('wiki.menu.settings.general') !!}">Général</a></li>
-                    <li><a href="#">Notifications</a></li>
-                    <li><a href="#">Synchronisation</a></li>
+                    <li><a href="{!! route('wiki.menu.settings.notification') !!}">Notifications</a></li>
+                    <li><a href="{!! route('wiki.menu.settings.synchro') !!}">Synchronisation</a></li>
                 </ul>
 
                 <img src="{{URL::asset('images/settings.png')}}" alt="" class="wiki-image">

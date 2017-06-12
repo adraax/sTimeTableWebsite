@@ -39,8 +39,8 @@
                         <a href="{!! route('wiki.menu.settings') !!}">Préférences</a>
                         <ol class="list-nostyle">
                             <li><a href="{!! route('wiki.menu.settings.general') !!}">Général</a></li>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
+                            <li><a href="{!! route('wiki.menu.settings.notification') !!}">Notifications</a></li>
+                            <li><a href="{!! route('wiki.menu.settings.synchro') !!}">Synchronisation</a></li>
                         </ol>
                     </li>
                 </ol>

@@ -81,6 +81,14 @@ Route::get('/wiki/menu/settings/general', function () {
     return view('wiki.menu.settings.general');
 })->name('wiki.menu.settings.general');
 
+Route::get('/wiki/menu/settings/notification', function () {
+    return view('wiki.menu.settings.notification');
+})->name('wiki.menu.settings.notification');
+
+Route::get('/wiki/menu/settings/synchro', function () {
+    return view('wiki.menu.settings.synchro');
+})->name('wiki.menu.settings.synchro');
+
 
 Route::resource('user', 'UserController');
 Route::get('/bug/closed', 'BugController@closed')->name('bug.closed');
