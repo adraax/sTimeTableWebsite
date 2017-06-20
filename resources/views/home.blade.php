@@ -27,7 +27,7 @@
                     De nouvelles fonctionnalités verront le jour avant la rentrée, découvrez ici les grandes lignes :
                 </p>
                 <ul>
-                    <li>Amélioration de la page "Mes enseignants" -> Envoi de mail groupé ou personnel.</li>
+                    <li>Amélioration de la page "Mes enseignants" &#x2192; Envoi de mail groupé ou personnel.</li>
                     <li>Ajout d'un deuxième parcours (pour les doubles licences par exemple)</li>
                     <li>
                         Possibilité d'ajouter un lien vers un calendrier ICS pour le synchroniser automatiquement (7
