@@ -69,13 +69,18 @@
                                 </div>
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group {{ $errors->has('checkMail') ? ' has-error' : '' }}">
                                 <div class="col-md-6 col-md-offset-4">
                                     <div class="checkbox">
                                         <label>
                                             <input type="checkbox" name="checkMail" id="checkMail">
                                             J'accepte de recevoir des mails de la Team Pluto
                                         </label>
+                                        @if ($errors->has('checkMail'))
+                                            <span class="help-block">
+                                                <strong>{{ $errors->first('checkMail') }}</strong>
+                                            </span>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
