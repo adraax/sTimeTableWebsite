@@ -74,7 +74,7 @@
                                     <div class="checkbox">
                                         <label>
                                             <input type="checkbox" name="checkMail" id="checkMail">
-                                            J'accepte de recevoir des mails de la Team Pluto
+                                            En cochant cette case, j'autorise l'administrateur à m'envoyer des mails
                                         </label>
                                         @if ($errors->has('checkMail'))
                                             <span class="help-block">
