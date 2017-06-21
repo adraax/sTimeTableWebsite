@@ -37,10 +37,9 @@
                         </div>
                         <div class="form-group">
                             <div class="checkbox">
-                                <div class="alert alert-warning" role="alert"><strong>Attention !</strong> Même en
-                                    décochant
-                                    cette case, vous recevrez un mail si un administrateur commente votre rapport de
-                                    bug.
+                                <div class="alert alert-warning" role="alert" id="alert" |><strong>Attention !</strong>
+                                    Même en décochant cette case, vous recevrez un mail si un administrateur commente
+                                    votre rapport de bug.
                                 </div>
                                 <label>
                                     <input type="checkbox" name="notifyBug" id="notifyBug" value="1"
@@ -76,4 +75,8 @@
     <a href="javascript:history.back()" class="btn btn-primary">
         <span class="glyphicon glyphicon-circle-arrow-left"></span> Retour
     </a>
+@endsection
+
+@section('scripts')
+    <script src="{{URL::asset('/js/editProfile.js')}}"></script>
 @endsection
