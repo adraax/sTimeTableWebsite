@@ -5,13 +5,6 @@
 @endsection
 
 @section('content')
-    <div class="alert alert-dismissible alert-info">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
-        Afin de corriger les bugs le plus efficacement possible, des mails automatiques sont maintenant envoyés par le
-        site.
-        <br>
-        Vous pouvez régler vos paramètres de réception sur votre profil.
-    </div>
     <div class="blog-header">
         <h1 class="blog-title">Emploi du temps Paul Sabatier</h1>
         <p class="lead blog-description">Application de gestion d'emploi du temps</p>
