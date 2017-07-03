@@ -17,6 +17,10 @@ Route::get('/', ['as' => 'home', function () {
 
 Route::get('/mail', 'HomeController@mail');
 
+Route::get('/wiki', function () {
+    return view('wiki.index');
+})->name('wiki.index');
+
 Route::get('/wiki/installation', function () {
     return view('wiki.install');
 })->name('wiki.installation');

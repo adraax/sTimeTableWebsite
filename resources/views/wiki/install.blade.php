@@ -36,6 +36,8 @@
                 </ul>
             </div><!-- /.blog-post -->
 
+            <a href="{!! route('wiki.index') !!}" class="btn btn-primary pull-left">Précédent : sommaire</a>
+
             <a href="{!! route('wiki.connection') !!}" class="btn btn-primary pull-right">Suivant : connexion</a>
             <div><br><br></div>
 
